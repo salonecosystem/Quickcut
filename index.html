@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QuickCut – India's Smart Salon Booking Platform</title>
+  <meta name="description" content="QuickCut connects customers with top salons nearby for instant booking. Salon owners get powerful tools to manage bookings, queue & revenue. Download free Android app."/>
+  <meta name="keywords" content="QuickCut, salon booking app India, haircut booking app, salon management app, barber app download, QuickCut APK, nearby salon booking"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="author" content="QuickCut"/>
+  <meta property="og:title" content="QuickCut – India's Smart Salon Booking Platform"/>
+  <meta property="og:description" content="Book a salon slot in 2 minutes. Manage your salon like a pro. Two powerful free apps."/>
+  <meta property="og:type" content="website"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"QuickCut","email":"salonecosystem@gmail.com","description":"India's smart salon booking platform with GPS-based discovery, instant slot booking, and salon management tools."}</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+
+  <style>
+    /* ═══════════════════════════════════════════════
+       THEME: Luxury Gold × Forest Green × Pure White
+       Feel: Premium Indian brand — like a 5-star spa
+       Gold = prestige  |  Green = nature/growth  |  White = clean/trust
+    ═══════════════════════════════════════════════ */
+
+    :root {
+      /* Gold palette */
+      --g1: #b8860b;   /* deep gold */
+      --g2: #d4a017;   /* rich gold */
+      --g3: #f0c040;   /* bright gold */
+      --g4: #fdf0c0;   /* gold tint */
+      --g5: #fffbee;   /* gold whisper */
+
+      /* Green palette */
+      --gr1: #1a4a2e;  /* deep forest */
+      --gr2: #1b5e37;  /* brand green */
+      --gr3: #2d7a50;  /* mid green */
+      --gr4: #4caf7a;  /* light green */
+      --gr5: #e8f5ee;  /* green tint */
+
+      /* Neutrals */
+      --white: #ffffff;
+      --off:   #fafaf8;
+      --warm:  #f7f4ed;
+      --border:#e8e2d0;
+      --text:  #1a1a16;
+      --muted: #6b6b58;
+
+      --serif: 'Cormorant Garamond', serif;
+      --sans:  'Plus Jakarta Sans', sans-serif;
+    }
+
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { font-family:var(--sans); background:var(--white); color:var(--text); overflow-x:hidden; }
+
+    /* ══════════ NAV ══════════ */
+    nav {
+      position:fixed; top:0; left:0; right:0; z-index:900;
+      background:rgba(255,255,255,0.96);
+      backdrop-filter:blur(24px);
+      border-bottom:1px solid var(--border);
+      box-shadow:0 1px 20px rgba(180,134,11,.06);
+    }
+    .nw {
+      max-width:1180px; margin:0 auto; padding:0 32px;
+      height:68px; display:flex; align-items:center; justify-content:space-between;
+    }
+    .logo {
+      font-family:var(--serif); font-weight:700; font-size:1.85rem;
+      letter-spacing:.01em; color:var(--text); text-decoration:none;
+      display:flex; align-items:center; gap:10px; line-height:1;
+    }
+    .logo-mark {
+      width:38px; height:38px;
+      background:linear-gradient(135deg, var(--g2), var(--g1));
+      border-radius:10px;
+      display:flex; align-items:center; justify-content:center;
+      font-size:1.1rem; color:white;
+      box-shadow:0 4px 14px rgba(180,134,11,.3);
+    }
+    .logo span { color:var(--gr2); }
+
+    .nl { display:flex; align-items:center; gap:32px; list-style:none; }
+    .nl a { font-size:.87rem; font-weight:500; color:var(--muted); text-decoration:none; transition:color .18s; }
+    .nl a:hover { color:var(--text); }
+    .nl .cta {
+      background:linear-gradient(135deg, var(--g2), var(--g1));
+      color:white !important; padding:10px 24px; border-radius:50px;
+      font-weight:700 !important; font-size:.85rem !important;
+      box-shadow:0 4px 16px rgba(180,134,11,.3);
+      transition:opacity .18s !important, transform .18s !important;
+    }
+    .nl .cta:hover { opacity:.9; transform:translateY(-1px); }
+    .hamburger { display:none; background:none; border:none; cursor:pointer; font-size:1.5rem; color:var(--text); }
+
+    /* ══════════ HERO ══════════ */
+    .hero {
+      min-height:100vh;
+      background:var(--gr1);
+      position:relative; overflow:hidden;
+      display:grid; grid-template-columns:1fr 1fr;
+      align-items:center; padding-top:68px;
+    }
+
+    /* layered background */
+    .hero-bg {
+      position:absolute; inset:0; pointer-events:none;
+      background:
+        radial-gradient(ellipse at 5% 15%,  rgba(212,160,23,.18) 0%, transparent 45%),
+        radial-gradient(ellipse at 90% 80%,  rgba(212,160,23,.1)  0%, transparent 40%),
+        radial-gradient(ellipse at 50% 50%,  rgba(45,122,80,.25)  0%, transparent 70%);
+    }
+
+    /* decorative gold lines */
+    .hero-lines {
+      position:absolute; inset:0; pointer-events:none; overflow:hidden;
+    }
+    .hero-lines::before {
+      content:'';
+      position:absolute;
+      top:-200px; right:-100px;
+      width:600px; height:600px;
+      border:1px solid rgba(212,160,23,.12);
+      border-radius:50%;
+    }
+    .hero-lines::after {
+      content:'';
+      position:absolute;
+      bottom:-150px; left:-80px;
+      width:400px; height:400px;
+      border:1px solid rgba(212,160,23,.08);
+      border-radius:50%;
+    }
+
+    /* wave bottom */
+    .hero-wave {
+      position:absolute; bottom:-1px; left:0; right:0;
+      line-height:0;
+    }
+    .hero-wave svg { width:100%; height:80px; }
+
+    .hero-left {
+      padding:80px 0 100px 80px;
+      position:relative; z-index:2;
+    }
+
+    @keyframes rise { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
+
+    .hero-badge {
+      display:inline-flex; align-items:center; gap:8px;
+      background:rgba(212,160,23,.15); border:1px solid rgba(212,160,23,.35);
+      color:var(--g3); font-size:.72rem; font-weight:700;
+      letter-spacing:.14em; text-transform:uppercase;
+      padding:8px 18px; border-radius:50px; margin-bottom:28px;
+      animation:rise .7s ease both;
+    }
+    .hero-badge::before { content:'✦'; font-size:.6rem; }
+
+    .hero-h1 {
+      font-family:var(--serif); font-weight:700;
+      font-size:clamp(3.2rem,5.5vw,5.8rem);
+      line-height:.95; letter-spacing:.01em; margin-bottom:24px;
+      animation:rise .7s .08s ease both;
+    }
+    .h1-w { display:block; color:var(--white); }
+    .h1-g { display:block; color:var(--g3); }
+    .h1-o {
+      display:block;
+      -webkit-text-stroke:1.5px rgba(212,160,23,.3);
+      color:transparent;
+    }
+
+    .hero-p {
+      color:rgba(255,255,255,.5); font-size:1rem; font-weight:300;
+      line-height:1.78; max-width:400px; margin-bottom:44px;
+      animation:rise .7s .16s ease both;
+    }
+
+    .hero-btns { display:flex; gap:14px; flex-wrap:wrap; animation:rise .7s .24s ease both; }
+
+    .btn-primary {
+      display:inline-flex; align-items:center; gap:10px;
+      background:linear-gradient(135deg, var(--g2) 0%, var(--g1) 100%);
+      color:white; font-family:var(--sans); font-weight:700; font-size:.9rem;
+      padding:16px 32px; border-radius:50px; text-decoration:none;
+      box-shadow:0 6px 24px rgba(180,134,11,.4);
+      transition:transform .2s, box-shadow .2s;
+      letter-spacing:.02em;
+    }
+    .btn-primary:hover { transform:translateY(-2px); box-shadow:0 10px 32px rgba(180,134,11,.5); }
+
+    .btn-outline {
+      display:inline-flex; align-items:center; gap:8px;
+      border:1px solid rgba(255,255,255,.2); color:rgba(255,255,255,.6);
+      font-size:.9rem; padding:15px 28px; border-radius:50px; text-decoration:none;
+      transition:border-color .2s, color .2s;
+    }
+    .btn-outline:hover { border-color:rgba(255,255,255,.5); color:white; }
+
+    .hero-stats {
+      display:flex; gap:36px; margin-top:56px;
+      animation:rise .7s .32s ease both;
+    }
+    .hs-n { font-family:var(--serif); font-size:2.2rem; font-weight:700; color:white; line-height:1; margin-bottom:4px; }
+    .hs-n em { color:var(--g3); font-style:normal; }
+    .hs-l { font-size:.7rem; color:rgba(255,255,255,.3); text-transform:uppercase; letter-spacing:.1em; }
+
+    /* hero phone cards */
+    .hero-right {
+      padding:80px 40px 100px 20px; position:relative; z-index:2;
+      display:flex; align-items:center; justify-content:center;
+      animation:rise .7s .18s ease both;
+    }
+    .ps { position:relative; width:300px; height:440px; }
+
+    .pc {
+      position:absolute; width:230px;
+      border-radius:26px; padding:22px 18px;
+      box-shadow:0 30px 70px rgba(0,0,0,.5);
+    }
+    .pc.c {
+      top:0; left:0; transform:rotate(-5deg); z-index:1;
+      background:linear-gradient(145deg,#1e2e20,#131e14);
+      border:1px solid rgba(212,160,23,.2);
+    }
+    .pc.s {
+      top:72px; right:0; transform:rotate(4deg); z-index:2;
+      background:linear-gradient(145deg,#2a1e08,#1a1200);
+      border:1px solid rgba(212,160,23,.3);
+    }
+    .pc:hover { transform:rotate(0deg) translateY(-8px) !important; z-index:10 !important; transition:transform .3s; }
+
+    .pc-chip {
+      display:inline-block; font-size:.62rem; font-weight:700;
+      letter-spacing:.1em; text-transform:uppercase;
+      padding:4px 10px; border-radius:50px; margin-bottom:12px;
+    }
+    .c .pc-chip { background:rgba(76,175,122,.15); color:var(--gr4); }
+    .s .pc-chip { background:rgba(212,160,23,.15); color:var(--g3); }
+
+    .pc-title { font-family:var(--serif); font-size:1rem; font-weight:700; color:white; margin-bottom:12px; }
+
+    .pc-row {
+      height:38px; background:rgba(255,255,255,.04);
+      border-radius:10px; margin-bottom:7px;
+      display:flex; align-items:center; gap:9px; padding:0 10px;
+    }
+    .pc-dot { width:24px; height:24px; border-radius:7px; flex-shrink:0; font-size:.8rem; display:flex; align-items:center; justify-content:center; }
+    .c .pc-dot { background:rgba(76,175,122,.18); }
+    .s .pc-dot { background:rgba(212,160,23,.18); }
+    .pc-txt { font-size:.68rem; color:rgba(255,255,255,.4); font-weight:500; }
+
+    .pc-btn {
+      width:100%; margin-top:12px; padding:10px; border-radius:10px;
+      font-size:.7rem; font-weight:800; text-align:center; letter-spacing:.04em;
+    }
+    .c .pc-btn { background:linear-gradient(135deg,var(--gr3),var(--gr2)); color:white; }
+    .s .pc-btn { background:linear-gradient(135deg,var(--g2),var(--g1)); color:white; }
+
+    /* ══════════ STATS BAND ══════════ */
+    .band {
+      background:linear-gradient(135deg, var(--g5) 0%, var(--white) 100%);
+      border-top:1px solid var(--border); border-bottom:1px solid var(--border);
+    }
+    .band-in {
+      max-width:1180px; margin:0 auto; padding:0 32px;
+      display:grid; grid-template-columns:repeat(4,1fr);
+    }
+    .bi {
+      padding:36px 0; text-align:center;
+      border-right:1px solid var(--border);
+    }
+    .bi:last-child { border-right:none; }
+    .bi-n { font-family:var(--serif); font-size:2.4rem; font-weight:700; color:var(--text); line-height:1; }
+    .bi-n em { color:var(--g1); font-style:normal; }
+    .bi-l { font-size:.7rem; color:var(--muted); text-transform:uppercase; letter-spacing:.09em; margin-top:4px; }
+
+    /* ══════════ SECTIONS ══════════ */
+    .sec { max-width:1180px; margin:0 auto; padding:96px 32px; }
+    .eyebrow {
+      display:inline-flex; align-items:center; gap:8px;
+      font-size:.72rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+      color:var(--g1); margin-bottom:14px;
+    }
+    .eyebrow::before { content:''; width:18px; height:1px; background:var(--g2); }
+    .sec-h {
+      font-family:var(--serif); font-weight:700;
+      font-size:clamp(2rem,3.8vw,3.2rem);
+      letter-spacing:.01em; line-height:1.1; margin-bottom:16px; color:var(--text);
+    }
+    .sec-p { color:var(--muted); font-size:.97rem; font-weight:300; line-height:1.78; max-width:520px; }
+
+    /* ══════════ DOWNLOAD ══════════ */
+    .dl-bg {
+      background:var(--gr1);
+      position:relative; overflow:hidden;
+    }
+    .dl-bg::before {
+      content:''; position:absolute; inset:0;
+      background:radial-gradient(ellipse at 20% 50%, rgba(212,160,23,.08), transparent 60%),
+                 radial-gradient(ellipse at 80% 30%, rgba(76,175,122,.08), transparent 50%);
+    }
+    .dl-bg .eyebrow { color:var(--g3); }
+    .dl-bg .sec-h { color:var(--white); }
+    .dl-bg .sec-p { color:rgba(255,255,255,.45); }
+    .dl-bg .eyebrow::before { background:var(--g3); }
+
+    .dl-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:56px; position:relative; z-index:1; }
+
+    .dc {
+      border-radius:28px; overflow:hidden; position:relative;
+      transition:transform .3s, box-shadow .3s;
+    }
+    .dc:hover { transform:translateY(-7px); box-shadow:0 32px 80px rgba(0,0,0,.3); }
+    .dc-body { padding:48px 44px; }
+
+    .dc.cust {
+      background:linear-gradient(145deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
+      border:1px solid rgba(212,160,23,.25);
+    }
+    .dc.sal {
+      background:linear-gradient(145deg, rgba(212,160,23,.12), rgba(212,160,23,.06));
+      border:1px solid rgba(212,160,23,.35);
+    }
+
+    .dc-chip {
+      display:inline-flex; align-items:center; gap:6px;
+      font-size:.65rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase;
+      padding:6px 14px; border-radius:50px; margin-bottom:28px;
+    }
+    .cust .dc-chip { background:rgba(76,175,122,.15); color:var(--gr4); border:1px solid rgba(76,175,122,.25); }
+    .sal .dc-chip  { background:rgba(212,160,23,.18); color:var(--g3); border:1px solid rgba(212,160,23,.35); }
+
+    .dc-icon {
+      width:64px; height:64px; border-radius:18px;
+      display:flex; align-items:center; justify-content:center; font-size:1.8rem;
+      margin-bottom:22px;
+    }
+    .cust .dc-icon { background:rgba(76,175,122,.12); }
+    .sal .dc-icon  { background:rgba(212,160,23,.12); }
+
+    .dc-title { font-family:var(--serif); font-size:2rem; font-weight:700; color:white; letter-spacing:.01em; line-height:1.05; margin-bottom:12px; }
+    .dc-desc  { font-size:.9rem; font-weight:300; line-height:1.72; color:rgba(255,255,255,.45); margin-bottom:32px; }
+
+    .dc-list { list-style:none; margin-bottom:38px; }
+    .dc-list li { display:flex; align-items:flex-start; gap:10px; font-size:.87rem; color:rgba(255,255,255,.55); margin-bottom:9px; }
+    .dc-list li::before {
+      content:'✓'; width:20px; height:20px; border-radius:50%;
+      display:flex; align-items:center; justify-content:center;
+      font-size:.65rem; font-weight:800; flex-shrink:0; margin-top:1px;
+    }
+    .cust .dc-list li::before { background:rgba(76,175,122,.2); color:var(--gr4); }
+    .sal  .dc-list li::before { background:rgba(212,160,23,.2); color:var(--g3); }
+
+    .btn-dl {
+      display:inline-flex; align-items:center; gap:11px;
+      font-family:var(--sans); font-weight:700; font-size:.9rem;
+      padding:16px 32px; border-radius:50px; text-decoration:none;
+      letter-spacing:.02em; transition:opacity .18s, transform .2s;
+    }
+    .btn-dl:hover { opacity:.88; transform:translateY(-2px); }
+    .cust .btn-dl { background:linear-gradient(135deg,var(--gr3),var(--gr2)); color:white; box-shadow:0 6px 20px rgba(27,94,55,.4); }
+    .sal  .btn-dl { background:linear-gradient(135deg,var(--g2),var(--g1)); color:white; box-shadow:0 6px 20px rgba(180,134,11,.4); }
+
+    .dc-note { display:block; margin-top:10px; font-size:.77rem; color:rgba(255,255,255,.22); font-style:italic; }
+    .dc-blob { position:absolute; bottom:-60px; right:-60px; width:220px; height:220px; border-radius:50%; opacity:.06; }
+    .cust .dc-blob { background:var(--gr4); }
+    .sal  .dc-blob { background:var(--g3); }
+
+    /* ══════════ HOW IT WORKS ══════════ */
+    .how-bg { background:var(--off); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+
+    .tabs {
+      display:flex; gap:4px; background:var(--white);
+      border:1px solid var(--border); padding:5px; border-radius:50px;
+      width:fit-content; margin:44px 0 56px;
+      box-shadow:0 2px 12px rgba(0,0,0,.05);
+    }
+    .tab {
+      padding:10px 28px; border-radius:50px; font-size:.87rem; font-weight:500;
+      border:none; cursor:pointer; background:transparent; color:var(--muted); transition:all .2s;
+    }
+    .tab.on { background:linear-gradient(135deg,var(--g2),var(--g1)); color:white; font-weight:700; box-shadow:0 4px 14px rgba(180,134,11,.3); }
+
+    .tc { display:none; }
+    .tc.on { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+
+    .hc {
+      background:var(--white); border:1px solid var(--border); border-radius:22px;
+      padding:32px 28px; position:relative; overflow:hidden;
+      transition:border-color .2s, box-shadow .2s, transform .2s;
+    }
+    .hc:hover { border-color:var(--g2); box-shadow:0 8px 32px rgba(180,134,11,.1); transform:translateY(-3px); }
+
+    .hc-n {
+      font-family:var(--serif); font-size:4rem; font-weight:700;
+      color:rgba(180,134,11,.07); position:absolute; top:14px; right:18px; line-height:1;
+    }
+    .hc-icon {
+      width:48px; height:48px; border-radius:14px;
+      background:linear-gradient(135deg,var(--g4),var(--g5));
+      border:1px solid rgba(180,134,11,.2);
+      display:flex; align-items:center; justify-content:center; font-size:1.35rem;
+      margin-bottom:18px;
+    }
+    .hc h3 { font-family:var(--serif); font-size:1.15rem; font-weight:700; margin-bottom:8px; color:var(--text); }
+    .hc p  { font-size:.87rem; color:var(--muted); line-height:1.65; font-weight:300; }
+
+    /* ══════════ FEATURES ══════════ */
+    .feat-bg { background:var(--white); }
+    .feat-grid {
+      display:grid; grid-template-columns:repeat(3,1fr);
+      border:1px solid var(--border); border-radius:24px; overflow:hidden;
+      margin-top:60px;
+      box-shadow:0 4px 40px rgba(0,0,0,.04);
+    }
+    .fc {
+      padding:36px 30px;
+      border-right:1px solid var(--border);
+      border-bottom:1px solid var(--border);
+      transition:background .2s;
+    }
+    .fc:hover { background:var(--g5); }
+    .fc:nth-child(3n) { border-right:none; }
+    .fc:nth-last-child(-n+3) { border-bottom:none; }
+    .fc-em { font-size:1.6rem; margin-bottom:14px; }
+    .fc h4 { font-family:var(--serif); font-size:1rem; font-weight:700; color:var(--text); margin-bottom:7px; }
+    .fc p  { font-size:.83rem; color:var(--muted); line-height:1.6; font-weight:300; }
+
+    /* ══════════ APP FEATURES LIST ══════════ */
+    .apps-bg { background:var(--gr5); border-top:1px solid rgba(27,94,55,.12); border-bottom:1px solid rgba(27,94,55,.12); }
+    .apps-grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; margin-top:56px; }
+    .app-col-head { display:flex; align-items:center; gap:12px; margin-bottom:20px; }
+    .app-col-ico {
+      width:46px; height:46px; border-radius:13px;
+      display:flex; align-items:center; justify-content:center; font-size:1.25rem;
+    }
+    .app-col-ico.g { background:linear-gradient(135deg,var(--g4),var(--g5)); border:1px solid rgba(180,134,11,.2); }
+    .app-col-ico.gr { background:linear-gradient(135deg,var(--gr5),#d5ede0); border:1px solid rgba(27,94,55,.15); }
+    .app-col h3 { font-family:var(--serif); font-size:1.3rem; font-weight:700; color:var(--text); }
+    .afl { list-style:none; }
+    .afl li {
+      display:flex; align-items:flex-start; gap:10px;
+      padding:9px 0; border-bottom:1px solid rgba(27,94,55,.1);
+      font-size:.88rem; color:var(--muted); line-height:1.5;
+    }
+    .afl li:last-child { border-bottom:none; }
+    .afl li span { color:var(--gr3); font-weight:800; flex-shrink:0; }
+
+    /* ══════════ ABOUT ══════════ */
+    .about-bg { background:var(--white); border-top:1px solid var(--border); }
+    .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
+    .about-visual {
+      aspect-ratio:1;
+      border-radius:32px; overflow:hidden;
+      background:linear-gradient(145deg, var(--gr1), var(--gr2));
+      display:flex; align-items:center; justify-content:center;
+      font-size:6rem; position:relative;
+      box-shadow:0 24px 60px rgba(26,74,46,.25);
+    }
+    .about-visual::before {
+      content:''; position:absolute; inset:0;
+      background:radial-gradient(circle at 35% 35%, rgba(212,160,23,.15), transparent 60%);
+    }
+    .about-visual::after {
+      content:''; position:absolute;
+      bottom:0; left:0; right:0; height:40%;
+      background:linear-gradient(to top, rgba(212,160,23,.08), transparent);
+    }
+    .about-text p { font-size:.95rem; color:var(--muted); line-height:1.82; margin-bottom:16px; font-weight:300; }
+    .contact-box {
+      display:flex; align-items:center; gap:14px;
+      background:var(--g5); border:1px solid rgba(180,134,11,.2);
+      border-radius:16px; padding:18px 22px; margin-top:28px;
+    }
+    .contact-ico {
+      width:42px; height:42px;
+      background:linear-gradient(135deg,var(--g2),var(--g1));
+      border-radius:11px; display:flex; align-items:center; justify-content:center;
+      font-size:1rem; flex-shrink:0;
+      box-shadow:0 4px 12px rgba(180,134,11,.25);
+    }
+    .contact-txt { font-size:.82rem; color:var(--muted); }
+    .contact-txt strong { display:block; font-size:.9rem; color:var(--text); font-weight:600; margin-bottom:2px; }
+
+    /* ══════════ CTA ══════════ */
+    .cta-bg {
+      background:linear-gradient(135deg, var(--gr1) 0%, var(--gr2) 60%, #1e5530 100%);
+      padding:100px 32px; text-align:center; position:relative; overflow:hidden;
+    }
+    .cta-bg::before {
+      content:''; position:absolute; inset:0;
+      background:radial-gradient(ellipse at 50% 0%, rgba(212,160,23,.15), transparent 60%);
+    }
+    .cta-bg .eyebrow { color:var(--g3); position:relative; z-index:1; }
+    .cta-bg .eyebrow::before { background:var(--g3); }
+    .cta-h {
+      font-family:var(--serif); font-weight:700; color:white;
+      font-size:clamp(2.4rem,5vw,4rem); letter-spacing:.01em; line-height:1.05;
+      margin-bottom:42px; position:relative; z-index:1;
+    }
+    .cta-h em { color:var(--g3); font-style:normal; }
+    .cta-btns { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; position:relative; z-index:1; }
+
+    .btn-wh {
+      display:inline-flex; align-items:center; gap:10px;
+      background:white; color:var(--gr2);
+      font-family:var(--sans); font-weight:700; font-size:.9rem;
+      padding:16px 32px; border-radius:50px; text-decoration:none;
+      box-shadow:0 6px 24px rgba(0,0,0,.2);
+      transition:opacity .18s, transform .2s;
+    }
+    .btn-wh:hover { opacity:.92; transform:translateY(-2px); }
+
+    .btn-gold-outline {
+      display:inline-flex; align-items:center; gap:10px;
+      background:linear-gradient(135deg,var(--g2),var(--g1)); color:white;
+      font-family:var(--sans); font-weight:700; font-size:.9rem;
+      padding:16px 32px; border-radius:50px; text-decoration:none;
+      box-shadow:0 6px 24px rgba(180,134,11,.4);
+      transition:opacity .18s, transform .2s;
+    }
+    .btn-gold-outline:hover { opacity:.9; transform:translateY(-2px); }
+
+    /* ══════════ FOOTER ══════════ */
+    footer {
+      background:var(--gr1);
+      border-top:1px solid rgba(212,160,23,.15);
+      padding:64px 32px 32px;
+    }
+    .fi { max-width:1180px; margin:0 auto; }
+    .ft {
+      display:flex; justify-content:space-between; align-items:flex-start;
+      flex-wrap:wrap; gap:44px;
+      padding-bottom:48px; border-bottom:1px solid rgba(212,160,23,.12); margin-bottom:28px;
+    }
+    .fl { font-family:var(--serif); font-weight:700; font-size:1.7rem; color:white; text-decoration:none; letter-spacing:.01em; display:flex; align-items:center; gap:10px; }
+    .fl em { color:var(--g3); font-style:normal; }
+    .fl-mark { width:34px; height:34px; background:linear-gradient(135deg,var(--g2),var(--g1)); border-radius:9px; display:flex; align-items:center; justify-content:center; font-size:.95rem; color:white; }
+    .ft-tag { font-size:.83rem; color:rgba(255,255,255,.3); font-weight:300; margin-top:8px; max-width:200px; line-height:1.6; }
+    .fcol h5 { font-size:.68rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:rgba(212,160,23,.5); margin-bottom:14px; }
+    .fcol ul { list-style:none; }
+    .fcol li { margin-bottom:10px; }
+    .fcol a { font-size:.86rem; color:rgba(255,255,255,.4); text-decoration:none; font-weight:300; transition:color .18s; }
+    .fcol a:hover { color:var(--g3); }
+    .fb { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; }
+    .fb-copy { font-size:.77rem; color:rgba(255,255,255,.18); font-weight:300; }
+    .fb-email { font-size:.77rem; color:var(--g2); text-decoration:none; }
+    .fb-email:hover { color:var(--g3); }
+
+    /* ══════════ STICKY ══════════ */
+    .sticky {
+      position:fixed; bottom:0; left:0; right:0;
+      background:rgba(26,74,46,.97); backdrop-filter:blur(20px);
+      border-top:1px solid rgba(212,160,23,.2);
+      padding:10px 18px 16px;
+      display:none; align-items:center; justify-content:space-between; gap:10px; z-index:800;
+    }
+    .s-txt { font-size:.8rem; color:rgba(255,255,255,.45); }
+    .s-txt strong { color:white; }
+    .s-btns { display:flex; gap:8px; }
+    .s-btn { font-size:.76rem; font-weight:700; padding:9px 18px; border-radius:50px; text-decoration:none; white-space:nowrap; }
+    .s-btn.c { background:linear-gradient(135deg,var(--gr3),var(--gr2)); color:white; }
+    .s-btn.s { background:linear-gradient(135deg,var(--g2),var(--g1)); color:white; }
+
+    /* ══════════ DIVIDER ══════════ */
+    .gold-divider {
+      height:3px;
+      background:linear-gradient(90deg, transparent, var(--g2), var(--g3), var(--g2), transparent);
+    }
+
+    /* ══════════ REVEAL ══════════ */
+    .reveal { opacity:0; transform:translateY(22px); transition:opacity .55s ease, transform .55s ease; }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+
+    /* ══════════ RESPONSIVE ══════════ */
+    @media(max-width:960px){
+      .hero { grid-template-columns:1fr; }
+      .hero-left { padding:60px 24px 80px; text-align:center; }
+      .hero-p,.hero-btns,.hero-stats { margin-left:auto; margin-right:auto; }
+      .hero-btns { justify-content:center; }
+      .hero-stats { justify-content:center; }
+      .hero-right { display:none; }
+      .band-in { grid-template-columns:repeat(2,1fr); }
+      .dl-grid { grid-template-columns:1fr; }
+      .tc.on { grid-template-columns:1fr; }
+      .feat-grid { grid-template-columns:1fr 1fr; }
+      .apps-grid { grid-template-columns:1fr; gap:32px; }
+      .about-grid { grid-template-columns:1fr; }
+      .about-visual { display:none; }
+      .ft { flex-direction:column; }
+      .nl { display:none; }
+      .hamburger { display:block; }
+      .sticky { display:flex; }
+      .sec { padding:72px 20px; }
+    }
+    @media(max-width:600px){
+      .feat-grid { grid-template-columns:1fr; }
+      .fc:nth-child(3n) { border-right:none; }
+      .band-in { grid-template-columns:1fr 1fr; }
+      .s-txt { display:none; }
+      .dc-body { padding:36px 28px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav>
+  <div class="nw">
+    <a href="#" class="logo">
+      <div class="logo-mark">✂</div>
+      Quick<span>Cut</span>
+    </a>
+    <ul class="nl">
+      <li><a href="#download">Download</a></li>
+      <li><a href="#how">How It Works</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#download" class="cta">Get Free App</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+  </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-lines"></div>
+
+  <div class="hero-left">
+    <div class="hero-badge">India's #1 Salon Booking Platform</div>
+    <h1 class="hero-h1">
+      <span class="h1-w">Your Next</span>
+      <span class="h1-g">Haircut,</span>
+      <span class="h1-o">Booked.</span>
+    </h1>
+    <p class="hero-p">QuickCut connects customers with top nearby salons — GPS-powered discovery, instant booking, UPI payment. Plus a complete management system for salon owners.</p>
+    <div class="hero-btns">
+      <a href="#download" class="btn-primary">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M5 20h14v-2H5v2zm7-18L5.33 9h3.84v6h5.66V9h3.84L12 2z"/></svg>
+        Download Free App
+      </a>
+      <a href="#how" class="btn-outline">How It Works →</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="hs-n">500<em>+</em></div><div class="hs-l">Salons</div></div>
+      <div><div class="hs-n">10K<em>+</em></div><div class="hs-l">Downloads</div></div>
+      <div><div class="hs-n">4.8<em>★</em></div><div class="hs-l">Rating</div></div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="ps">
+      <div class="pc c">
+        <div class="pc-chip">Customer App</div>
+        <div class="pc-title">Book a Salon</div>
+        <div class="pc-row"><div class="pc-dot">💈</div><div class="pc-txt">Royal Cuts — ⭐4.9 · 0.3km</div></div>
+        <div class="pc-row"><div class="pc-dot">✂️</div><div class="pc-txt">Style Zone — ⭐4.8 · 0.6km</div></div>
+        <div class="pc-row"><div class="pc-dot">🪒</div><div class="pc-txt">GlowUp Barbers · 0.9km</div></div>
+        <div class="pc-btn">Book Slot Now →</div>
+      </div>
+      <div class="pc s">
+        <div class="pc-chip">Salon Owner App</div>
+        <div class="pc-title">Manage Salon</div>
+        <div class="pc-row"><div class="pc-dot">📅</div><div class="pc-txt">Today: 12 Bookings</div></div>
+        <div class="pc-row"><div class="pc-dot">💰</div><div class="pc-txt">Revenue: ₹3,240 today</div></div>
+        <div class="pc-row"><div class="pc-dot">⏳</div><div class="pc-txt">Queue: 3 waiting</div></div>
+        <div class="pc-btn">Open Dashboard →</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-wave">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ══ GOLD DIVIDER ══ -->
+<div class="gold-divider"></div>
+
+<!-- ══ STATS BAND ══ -->
+<div class="band">
+  <div class="band-in">
+    <div class="bi"><div class="bi-n">500<em>+</em></div><div class="bi-l">Salons Listed</div></div>
+    <div class="bi"><div class="bi-n">10K<em>+</em></div><div class="bi-l">App Downloads</div></div>
+    <div class="bi"><div class="bi-n">₹<em>0</em></div><div class="bi-l">Forever Free</div></div>
+    <div class="bi"><div class="bi-n">2<em> Apps</em></div><div class="bi-l">Customer + Salon</div></div>
+  </div>
+</div>
+
+<!-- ══ DOWNLOAD ══ -->
+<div class="dl-bg" id="download">
+  <div class="sec">
+    <div class="eyebrow reveal">Two Apps. One Ecosystem.</div>
+    <h2 class="sec-h reveal">Download QuickCut<br/>for Your Role</h2>
+    <p class="sec-p reveal">Whether you're a customer looking for a great haircut, or a salon owner building your business — we have the perfect free app for you.</p>
+
+    <div class="dl-grid">
+      <div class="dc cust reveal">
+        <div class="dc-body">
+          <div class="dc-chip">✦ For Customers</div>
+          <div class="dc-icon">👤</div>
+          <h3 class="dc-title">Customer App</h3>
+          <p class="dc-desc">Find the best salons near you, pick a slot, pay online, and walk straight into the chair — no waiting in line, ever.</p>
+          <ul class="dc-list">
+            <li>GPS-based salon discovery (5–20km radius)</li>
+            <li>Sort by nearest, rating, or open now</li>
+            <li>Instant slot booking — no phone calls</li>
+            <li>UPI / QR code secure payment</li>
+            <li>Live booking confirmation & reminders</li>
+            <li>Cancel up to 2 hours before appointment</li>
+            <li>Google Maps directions to salon</li>
+          </ul>
+          <a href="customer-app.apk" download class="btn-dl">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M5 20h14v-2H5v2zm7-18L5.33 9h3.84v6h5.66V9h3.84L12 2z"/></svg>
+            Download Customer App
+          </a>
+          <span class="dc-note">📱 Android APK · Free</span>
+        </div>
+        <div class="dc-blob"></div>
+      </div>
+
+      <div class="dc sal reveal">
+        <div class="dc-body">
+          <div class="dc-chip">✦ For Salon Owners</div>
+          <div class="dc-icon">💈</div>
+          <h3 class="dc-title">Salon Owner App</h3>
+          <p class="dc-desc">Run your entire salon from your phone. Accept bookings, manage queue, track earnings, and grow your business intelligently.</p>
+          <ul class="dc-list">
+            <li>Accept / reject customer bookings instantly</li>
+            <li>Add, edit & manage all your services</li>
+            <li>Online / Offline toggle with one tap</li>
+            <li>Block time slots for breaks or holidays</li>
+            <li>Daily revenue with commission breakdown</li>
+            <li>Monthly earnings report & analytics</li>
+            <li>GPS location — appear in nearby search</li>
+          </ul>
+          <a href="salon-app.apk" download class="btn-dl">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M5 20h14v-2H5v2zm7-18L5.33 9h3.84v6h5.66V9h3.84L12 2z"/></svg>
+            Download Salon App
+          </a>
+          <span class="dc-note">📱 Android APK · Free</span>
+        </div>
+        <div class="dc-blob"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ HOW IT WORKS ══ -->
+<div class="how-bg" id="how">
+  <div class="sec">
+    <div class="eyebrow reveal">Simple Process</div>
+    <h2 class="sec-h reveal">How QuickCut Works</h2>
+    <p class="sec-p reveal">Designed to save time for customers and grow business for salon owners — in just a few taps.</p>
+
+    <div class="tabs reveal">
+      <button class="tab on" onclick="switchTab('cu')">For Customers</button>
+      <button class="tab" onclick="switchTab('sa')">For Salon Owners</button>
+    </div>
+
+    <div class="tc on" id="tc-cu">
+      <div class="hc"><div class="hc-n">01</div><div class="hc-icon">📍</div><h3>Find Nearby Salons</h3><p>Allow location and instantly see top-rated salons near you — sorted by distance, ratings, services and open status.</p></div>
+      <div class="hc"><div class="hc-n">02</div><div class="hc-icon">📅</div><h3>Book Your Slot</h3><p>Choose a service, pick a time slot, and confirm with UPI payment — all in under 2 minutes. No phone calls needed.</p></div>
+      <div class="hc"><div class="hc-n">03</div><div class="hc-icon">✂️</div><h3>Walk In & Sit Down</h3><p>Arrive at your booked time with your booking code. Chair is ready and waiting — zero queue, perfect service.</p></div>
+    </div>
+
+    <div class="tc" id="tc-sa">
+      <div class="hc"><div class="hc-n">01</div><div class="hc-icon">🏪</div><h3>Register Your Salon</h3><p>Download the Salon App, add your shop details, services, prices and hours. Go live and appear in local search in minutes.</p></div>
+      <div class="hc"><div class="hc-n">02</div><div class="hc-icon">🔔</div><h3>Accept Bookings</h3><p>Get instant notifications when customers book. Accept, manage, or reschedule from a clean dashboard.</p></div>
+      <div class="hc"><div class="hc-n">03</div><div class="hc-icon">📈</div><h3>Track & Grow</h3><p>See daily revenue, booking trends, and customer data. Understand peak hours and monthly earnings — all in the app.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ FEATURES ══ -->
+<div class="feat-bg" id="features">
+  <div class="sec">
+    <div class="eyebrow reveal">Platform Features</div>
+    <h2 class="sec-h reveal">Built for the<br/>Indian Salon Industry</h2>
+    <p class="sec-p reveal">Every feature was built because real salon owners and customers asked for it.</p>
+
+    <div class="feat-grid reveal">
+      <div class="fc"><div class="fc-em">📍</div><h4>GPS Discovery</h4><p>Haversine formula-based nearby search. Radius filter from 5 to 20km.</p></div>
+      <div class="fc"><div class="fc-em">⚡</div><h4>Instant Booking</h4><p>Slot confirmed in under 2 minutes. No phone calls, no back-and-forth.</p></div>
+      <div class="fc"><div class="fc-em">💳</div><h4>UPI / QR Payment</h4><p>Customers pay securely online. Salon owners get real-time confirmation.</p></div>
+      <div class="fc"><div class="fc-em">🔔</div><h4>Live Notifications</h4><p>Booking confirmed, slot approaching, or cancelled — all real-time alerts.</p></div>
+      <div class="fc"><div class="fc-em">📊</div><h4>Earnings Dashboard</h4><p>Daily and monthly revenue with ₹5 commission breakdown for owners.</p></div>
+      <div class="fc"><div class="fc-em">🗂️</div><h4>Queue Management</h4><p>Manage walk-ins and booked slots together from one live dashboard.</p></div>
+      <div class="fc"><div class="fc-em">🔒</div><h4>2-Hour Cancel Rule</h4><p>Customers can cancel up to 2 hours before. Fair for both sides, auto-enforced.</p></div>
+      <div class="fc"><div class="fc-em">⭐</div><h4>Ratings & Reviews</h4><p>Verified customer reviews help the best salons rise naturally.</p></div>
+      <div class="fc"><div class="fc-em">🆓</div><h4>100% Free</h4><p>Both apps — completely free to download and use. No subscriptions.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ APP FEATURES LIST ══ -->
+<div class="apps-bg">
+  <div class="sec">
+    <div class="eyebrow reveal">What's Inside</div>
+    <h2 class="sec-h reveal">Two Powerful Apps,<br/>One Platform</h2>
+    <div class="apps-grid">
+      <div class="app-col reveal">
+        <div class="app-col-head">
+          <div class="app-col-ico g">👤</div>
+          <h3>Customer App</h3>
+        </div>
+        <ul class="afl">
+          <li><span>✓</span> GPS location detect & auto-search</li>
+          <li><span>✓</span> Nearby salons with exact distance</li>
+          <li><span>✓</span> Radius filter: 5 / 10 / 15 / 20km</li>
+          <li><span>✓</span> Sort by nearest first</li>
+          <li><span>✓</span> Search by city, area, or pincode</li>
+          <li><span>✓</span> Open Now filter</li>
+          <li><span>✓</span> Service selection & slot booking</li>
+          <li><span>✓</span> UPI payment with UTR confirmation</li>
+          <li><span>✓</span> Cancel allowed up to 2 hours before</li>
+          <li><span>✓</span> Google Maps directions to salon</li>
+          <li><span>✓</span> Booking history & status tracking</li>
+          <li><span>✓</span> Forgot password recovery</li>
+        </ul>
+      </div>
+      <div class="app-col reveal">
+        <div class="app-col-head">
+          <div class="app-col-ico gr">💈</div>
+          <h3>Salon Owner App</h3>
+        </div>
+        <ul class="afl">
+          <li><span>✓</span> Login & forgot password</li>
+          <li><span>✓</span> Add / edit / delete services & pricing</li>
+          <li><span>✓</span> Accept or reject incoming bookings</li>
+          <li><span>✓</span> 2-hour cancellation rule auto-enforced</li>
+          <li><span>✓</span> Online / Offline toggle</li>
+          <li><span>✓</span> Set salon location via GPS</li>
+          <li><span>✓</span> Slot management + block specific slots</li>
+          <li><span>✓</span> Daily earnings with ₹5 commission</li>
+          <li><span>✓</span> Monthly earnings report</li>
+          <li><span>✓</span> UTR payment verification</li>
+          <li><span>✓</span> Customer booking history</li>
+          <li><span>✓</span> Salon approval by admin required</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ ABOUT ══ -->
+<div class="about-bg" id="about">
+  <div class="sec">
+    <div class="about-grid">
+      <div class="about-visual reveal">✂️</div>
+      <div class="about-text">
+        <div class="eyebrow reveal">Our Mission</div>
+        <h2 class="sec-h reveal">Building India's<br/>Salon Ecosystem</h2>
+        <p class="reveal">QuickCut was built with one simple belief — your time matters. We saw customers wasting hours waiting at salons, and salon owners drowning in manual work with no proper tools.</p>
+        <p class="reveal">So we built a complete ecosystem — two apps working together. Customers get a fast, GPS-powered way to find and book the perfect salon. Owners get a professional system to accept bookings, manage their queue, and track their business.</p>
+        <p class="reveal">We are growing city by city, salon by salon — one great haircut at a time.</p>
+        <div class="contact-box reveal">
+          <div class="contact-ico">✉️</div>
+          <div class="contact-txt">
+            <strong>salonecosystem@gmail.com</strong>
+            For support, partnerships, or feedback
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ CTA ══ -->
+<div class="cta-bg">
+  <div class="eyebrow reveal">Ready to Start?</div>
+  <h2 class="cta-h reveal">Download QuickCut.<br/>It's <em>Completely Free.</em></h2>
+  <div class="cta-btns reveal">
+    <a href="customer-app.apk" download class="btn-wh">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M5 20h14v-2H5v2zm7-18L5.33 9h3.84v6h5.66V9h3.84L12 2z"/></svg>
+      Customer App
+    </a>
+    <a href="salon-app.apk" download class="btn-gold-outline">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M5 20h14v-2H5v2zm7-18L5.33 9h3.84v6h5.66V9h3.84L12 2z"/></svg>
+      Salon Owner App
+    </a>
+  </div>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="fi">
+    <div class="ft">
+      <div>
+        <a href="#" class="fl"><div class="fl-mark">✂</div>Quick<em>Cut</em></a>
+        <p class="ft-tag">India's smart salon booking platform — for customers and salon owners.</p>
+      </div>
+      <div class="fcol">
+        <h5>Platform</h5>
+        <ul>
+          <li><a href="#download">Customer App</a></li>
+          <li><a href="#download">Salon Owner App</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#how">How It Works</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#about">About QuickCut</a></li>
+          <li><a href="mailto:salonecosystem@gmail.com">Contact Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h5>Support</h5>
+        <ul>
+          <li><a href="mailto:salonecosystem@gmail.com">salonecosystem@gmail.com</a></li>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fb">
+      <span class="fb-copy">© 2025 QuickCut. All rights reserved.</span>
+      <a href="mailto:salonecosystem@gmail.com" class="fb-email">salonecosystem@gmail.com</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ══ STICKY BAR ══ -->
+<div class="sticky" id="stickyBar">
+  <div class="s-txt"><strong>QuickCut</strong> — 2 Free Apps</div>
+  <div class="s-btns">
+    <a href="customer-app.apk" download class="s-btn c">👤 Customer</a>
+    <a href="salon-app.apk" download class="s-btn s">💈 Salon</a>
+  </div>
+</div>
+
+<script>
+  // sticky bar
+  const heroEl = document.querySelector('.hero');
+  const barEl  = document.getElementById('stickyBar');
+  new IntersectionObserver(([e]) => {
+    barEl.style.display = e.isIntersecting ? 'none' : 'flex';
+  }, { threshold:0.1 }).observe(heroEl);
+
+  // tabs
+  function switchTab(w) {
+    document.querySelectorAll('.tab').forEach((b,i) => b.classList.toggle('on', (w==='cu'&&i===0)||(w==='sa'&&i===1)));
+    document.getElementById('tc-cu').className = 'tc'+(w==='cu'?' on':'');
+    document.getElementById('tc-sa').className = 'tc'+(w==='sa'?' on':'');
+  }
+
+  // mobile menu
+  function toggleMenu() {
+    const nl = document.querySelector('.nl');
+    nl.style.cssText = nl.style.display==='flex'
+      ? ''
+      : 'display:flex;flex-direction:column;position:absolute;top:68px;left:0;right:0;background:rgba(255,255,255,0.98);backdrop-filter:blur(20px);padding:20px 32px;gap:16px;border-bottom:1px solid #e8e2d0;box-shadow:0 8px 32px rgba(0,0,0,.08);z-index:999;';
+  }
+
+  // scroll reveal
+  const ro = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); ro.unobserve(e.target); } });
+  }, { threshold:0.1 });
+  document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+</script>
+</body>
+</html>
