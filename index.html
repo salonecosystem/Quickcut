@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
-  <meta name="google-site-verification" content="65NxYfDrDxrO_sRfdoQrETsrvipcNcfk4lrOp_Bybts" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- ═══ SEO ═══ -->
   <title>QuickCut – India's Smart Salon Booking Platform</title>
   <meta name="description" content="QuickCut connects customers with top salons nearby for instant booking. Salon owners get powerful tools to manage bookings, queue & revenue. Download free Android app."/>
   <meta name="keywords" content="QuickCut, salon booking app India, haircut booking app, salon management app, barber app download, QuickCut APK, nearby salon booking"/>
@@ -12,927 +13,738 @@
   <meta property="og:title" content="QuickCut – India's Smart Salon Booking Platform"/>
   <meta property="og:description" content="Book a salon slot in 2 minutes. Manage your salon like a pro. Two powerful free apps."/>
   <meta property="og:type" content="website"/>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"QuickCut","email":"salonecosystem@gmail.com","description":"India's smart salon booking platform with GPS-based discovery, instant slot booking, and salon management tools."}</script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"QuickCut","email":"salonecosystem@gmail.com","description":"India's smart salon booking platform with GPS-based discovery, instant slot booking, and salon management tools.","offers":[{"@type":"Offer","name":"Customer App – Book Salons","price":"0","priceCurrency":"INR"},{"@type":"Offer","name":"Salon Owner App – Manage Business","price":"0","priceCurrency":"INR"}]}
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
 
   <style>
-    /* ═══════════════════════════════════════════════
-       THEME: Luxury Gold × Forest Green × Pure White
-       Feel: Premium Indian brand — like a 5-star spa
-       Gold = prestige  |  Green = nature/growth  |  White = clean/trust
-    ═══════════════════════════════════════════════ */
-
     :root {
-      /* Gold palette */
-      --g1: #b8860b;   /* deep gold */
-      --g2: #d4a017;   /* rich gold */
-      --g3: #f0c040;   /* bright gold */
-      --g4: #fdf0c0;   /* gold tint */
-      --g5: #fffbee;   /* gold whisper */
-
-      /* Green palette */
-      --gr1: #1a4a2e;  /* deep forest */
-      --gr2: #1b5e37;  /* brand green */
-      --gr3: #2d7a50;  /* mid green */
-      --gr4: #4caf7a;  /* light green */
-      --gr5: #e8f5ee;  /* green tint */
-
-      /* Neutrals */
-      --white: #ffffff;
-      --off:   #fafaf8;
-      --warm:  #f7f4ed;
-      --border:#e8e2d0;
-      --text:  #1a1a16;
-      --muted: #6b6b58;
-
-      --serif: 'Cormorant Garamond', serif;
-      --sans:  'Plus Jakarta Sans', sans-serif;
+      --ink:    #080c08;
+      --cream:  #f5f2eb;
+      --warm:   #ede9df;
+      --white:  #ffffff;
+      --gold:   #c8962a;
+      --gold2:  #e8b84b;
+      --green:  #1b5e37;
+      --green2: #2d7a50;
+      --green3: #4caf7a;
+      --muted:  #7a8a7e;
+      --border: #ddd9cf;
+      --display: 'Syne', sans-serif;
+      --body:    'Plus Jakarta Sans', sans-serif;
     }
 
     *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
     html { scroll-behavior:smooth; }
-    body { font-family:var(--sans); background:var(--white); color:var(--text); overflow-x:hidden; }
+    body { font-family:var(--body); background:var(--cream); color:var(--ink); overflow-x:hidden; }
 
-    /* ══════════ NAV ══════════ */
+    /* ═══ NAV ═══ */
     nav {
       position:fixed; top:0; left:0; right:0; z-index:900;
-      background:rgba(255,255,255,0.96);
-      backdrop-filter:blur(24px);
+      background:rgba(245,242,235,0.93);
+      backdrop-filter:blur(20px);
       border-bottom:1px solid var(--border);
-      box-shadow:0 1px 20px rgba(180,134,11,.06);
     }
-    .nw {
-      max-width:1180px; margin:0 auto; padding:0 32px;
-      height:68px; display:flex; align-items:center; justify-content:space-between;
+    .nav-wrap {
+      max-width:1180px; margin:0 auto;
+      padding:0 32px; height:66px;
+      display:flex; align-items:center; justify-content:space-between;
     }
     .logo {
-      font-family:var(--serif); font-weight:700; font-size:1.85rem;
-      letter-spacing:.01em; color:var(--text); text-decoration:none;
-      display:flex; align-items:center; gap:10px; line-height:1;
+      font-family:var(--display); font-weight:800; font-size:1.55rem;
+      letter-spacing:-0.04em; color:var(--ink); text-decoration:none;
+      display:flex; align-items:center; gap:9px;
     }
     .logo-mark {
-      width:38px; height:38px;
-      background:linear-gradient(135deg, var(--g2), var(--g1));
-      border-radius:10px;
+      width:34px; height:34px; background:var(--ink); border-radius:9px;
       display:flex; align-items:center; justify-content:center;
-      font-size:1.1rem; color:white;
-      box-shadow:0 4px 14px rgba(180,134,11,.3);
+      font-size:1.1rem; color:var(--cream);
     }
-    .logo span { color:var(--gr2); }
-
-    .nl { display:flex; align-items:center; gap:32px; list-style:none; }
-    .nl a { font-size:.87rem; font-weight:500; color:var(--muted); text-decoration:none; transition:color .18s; }
-    .nl a:hover { color:var(--text); }
-    .nl .cta {
-      background:linear-gradient(135deg, var(--g2), var(--g1));
-      color:white !important; padding:10px 24px; border-radius:50px;
-      font-weight:700 !important; font-size:.85rem !important;
-      box-shadow:0 4px 16px rgba(180,134,11,.3);
-      transition:opacity .18s !important, transform .18s !important;
+    .logo em { color:var(--gold); font-style:normal; }
+    .nav-links { display:flex; align-items:center; gap:32px; list-style:none; }
+    .nav-links a { font-size:0.87rem; font-weight:500; color:var(--muted); text-decoration:none; transition:color .18s; }
+    .nav-links a:hover { color:var(--ink); }
+    .nav-dl {
+      background:var(--ink); color:var(--cream) !important;
+      padding:10px 22px; border-radius:50px;
+      font-weight:600 !important; transition:background .18s !important;
     }
-    .nl .cta:hover { opacity:.9; transform:translateY(-1px); }
-    .hamburger { display:none; background:none; border:none; cursor:pointer; font-size:1.5rem; color:var(--text); }
+    .nav-dl:hover { background:var(--green) !important; color:#fff !important; }
+    .hamburger { display:none; background:none; border:none; cursor:pointer; font-size:1.5rem; color:var(--ink); }
 
-    /* ══════════ HERO ══════════ */
+    /* ═══ HERO ═══ */
     .hero {
       min-height:100vh;
-      background:var(--gr1);
+      background:var(--ink);
       position:relative; overflow:hidden;
       display:grid; grid-template-columns:1fr 1fr;
-      align-items:center; padding-top:68px;
+      align-items:center;
+      padding-top:66px;
     }
-
-    /* layered background */
-    .hero-bg {
+    .hero::after {
+      content:'';
+      position:absolute; bottom:-1px; left:0; right:0; height:100px;
+      background:var(--cream);
+      clip-path:polygon(0 100%,100% 100%,100% 30%,0 100%);
+    }
+    .hero-gfx {
       position:absolute; inset:0; pointer-events:none;
       background:
-        radial-gradient(ellipse at 5% 15%,  rgba(212,160,23,.18) 0%, transparent 45%),
-        radial-gradient(ellipse at 90% 80%,  rgba(212,160,23,.1)  0%, transparent 40%),
-        radial-gradient(ellipse at 50% 50%,  rgba(45,122,80,.25)  0%, transparent 70%);
+        radial-gradient(ellipse at 10% 20%, rgba(200,150,42,.13) 0%, transparent 50%),
+        radial-gradient(ellipse at 85% 75%, rgba(27,94,55,.18) 0%, transparent 50%);
     }
-
-    /* decorative gold lines */
-    .hero-lines {
-      position:absolute; inset:0; pointer-events:none; overflow:hidden;
+    /* subtle scissor grid lines */
+    .hero-grid {
+      position:absolute; inset:0; pointer-events:none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+      background-size:60px 60px;
     }
-    .hero-lines::before {
-      content:'';
-      position:absolute;
-      top:-200px; right:-100px;
-      width:600px; height:600px;
-      border:1px solid rgba(212,160,23,.12);
-      border-radius:50%;
-    }
-    .hero-lines::after {
-      content:'';
-      position:absolute;
-      bottom:-150px; left:-80px;
-      width:400px; height:400px;
-      border:1px solid rgba(212,160,23,.08);
-      border-radius:50%;
-    }
-
-    /* wave bottom */
-    .hero-wave {
-      position:absolute; bottom:-1px; left:0; right:0;
-      line-height:0;
-    }
-    .hero-wave svg { width:100%; height:80px; }
 
     .hero-left {
-      padding:80px 0 100px 80px;
+      padding:80px 0 120px 80px;
       position:relative; z-index:2;
     }
+    @keyframes up { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:translateY(0)} }
 
-    @keyframes rise { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
-
-    .hero-badge {
+    .hero-chip {
       display:inline-flex; align-items:center; gap:8px;
-      background:rgba(212,160,23,.15); border:1px solid rgba(212,160,23,.35);
-      color:var(--g3); font-size:.72rem; font-weight:700;
-      letter-spacing:.14em; text-transform:uppercase;
-      padding:8px 18px; border-radius:50px; margin-bottom:28px;
-      animation:rise .7s ease both;
+      background:rgba(200,150,42,.1); border:1px solid rgba(200,150,42,.28);
+      color:var(--gold2); font-size:.72rem; font-weight:700;
+      letter-spacing:.12em; text-transform:uppercase;
+      padding:7px 16px; border-radius:50px; margin-bottom:30px;
+      animation:up .7s ease both;
     }
-    .hero-badge::before { content:'✦'; font-size:.6rem; }
+    .hero-chip::before { content:'✦'; font-size:.6rem; }
 
     .hero-h1 {
-      font-family:var(--serif); font-weight:700;
-      font-size:clamp(3.2rem,5.5vw,5.8rem);
-      line-height:.95; letter-spacing:.01em; margin-bottom:24px;
-      animation:rise .7s .08s ease both;
+      font-family:var(--display); font-weight:800;
+      font-size:clamp(3rem,5.2vw,5.2rem);
+      line-height:.95; letter-spacing:-.045em; margin-bottom:26px;
+      animation:up .7s .08s ease both;
     }
-    .h1-w { display:block; color:var(--white); }
-    .h1-g { display:block; color:var(--g3); }
-    .h1-o {
+    .hero-h1 .white { color:var(--cream); display:block; }
+    .hero-h1 .gold  { color:var(--gold2); display:block; }
+    .hero-h1 .ghost {
       display:block;
-      -webkit-text-stroke:1.5px rgba(212,160,23,.3);
+      -webkit-text-stroke:1.5px rgba(245,242,235,.22);
       color:transparent;
     }
-
     .hero-p {
-      color:rgba(255,255,255,.5); font-size:1rem; font-weight:300;
+      color:rgba(245,242,235,.45); font-size:1rem; font-weight:300;
       line-height:1.78; max-width:400px; margin-bottom:44px;
-      animation:rise .7s .16s ease both;
+      animation:up .7s .16s ease both;
     }
-
-    .hero-btns { display:flex; gap:14px; flex-wrap:wrap; animation:rise .7s .24s ease both; }
-
-    .btn-primary {
+    .hero-btns { display:flex; gap:12px; flex-wrap:wrap; animation:up .7s .24s ease both; }
+    .btn-gold {
       display:inline-flex; align-items:center; gap:10px;
-      background:linear-gradient(135deg, var(--g2) 0%, var(--g1) 100%);
-      color:white; font-family:var(--sans); font-weight:700; font-size:.9rem;
-      padding:16px 32px; border-radius:50px; text-decoration:none;
-      box-shadow:0 6px 24px rgba(180,134,11,.4);
-      transition:transform .2s, box-shadow .2s;
-      letter-spacing:.02em;
+      background:var(--gold); color:var(--ink);
+      font-family:var(--display); font-weight:800; font-size:.9rem;
+      padding:15px 30px; border-radius:50px; text-decoration:none;
+      letter-spacing:.02em; transition:background .2s, transform .2s;
     }
-    .btn-primary:hover { transform:translateY(-2px); box-shadow:0 10px 32px rgba(180,134,11,.5); }
-
-    .btn-outline {
+    .btn-gold:hover { background:var(--gold2); transform:translateY(-2px); }
+    .btn-ghost {
       display:inline-flex; align-items:center; gap:8px;
-      border:1px solid rgba(255,255,255,.2); color:rgba(255,255,255,.6);
-      font-size:.9rem; padding:15px 28px; border-radius:50px; text-decoration:none;
+      border:1px solid rgba(245,242,235,.18); color:rgba(245,242,235,.55);
+      font-size:.9rem; padding:14px 28px; border-radius:50px; text-decoration:none;
       transition:border-color .2s, color .2s;
     }
-    .btn-outline:hover { border-color:rgba(255,255,255,.5); color:white; }
+    .btn-ghost:hover { border-color:rgba(245,242,235,.45); color:var(--cream); }
 
     .hero-stats {
-      display:flex; gap:36px; margin-top:56px;
-      animation:rise .7s .32s ease both;
+      display:flex; gap:40px; margin-top:60px;
+      animation:up .7s .32s ease both;
     }
-    .hs-n { font-family:var(--serif); font-size:2.2rem; font-weight:700; color:white; line-height:1; margin-bottom:4px; }
-    .hs-n em { color:var(--g3); font-style:normal; }
-    .hs-l { font-size:.7rem; color:rgba(255,255,255,.3); text-transform:uppercase; letter-spacing:.1em; }
+    .hs-num {
+      font-family:var(--display); font-size:2.1rem; font-weight:800;
+      color:var(--cream); line-height:1; margin-bottom:4px;
+    }
+    .hs-num span { color:var(--gold2); }
+    .hs-label { font-size:.72rem; color:rgba(245,242,235,.3); text-transform:uppercase; letter-spacing:.09em; }
 
-    /* hero phone cards */
+    /* hero right — stacked phone cards */
     .hero-right {
-      padding:80px 40px 100px 20px; position:relative; z-index:2;
+      position:relative; z-index:2;
+      padding:80px 40px 120px 20px;
       display:flex; align-items:center; justify-content:center;
-      animation:rise .7s .18s ease both;
+      animation:up .7s .18s ease both;
     }
-    .ps { position:relative; width:300px; height:440px; }
-
-    .pc {
+    .phone-stack { position:relative; width:300px; height:440px; }
+    .pcard {
       position:absolute; width:230px;
-      border-radius:26px; padding:22px 18px;
-      box-shadow:0 30px 70px rgba(0,0,0,.5);
+      background:linear-gradient(145deg,#161c16,#0d130d);
+      border:1px solid rgba(255,255,255,.07);
+      border-radius:26px; padding:20px 18px;
+      box-shadow:0 28px 70px rgba(0,0,0,.65);
     }
-    .pc.c {
-      top:0; left:0; transform:rotate(-5deg); z-index:1;
-      background:linear-gradient(145deg,#1e2e20,#131e14);
-      border:1px solid rgba(212,160,23,.2);
-    }
-    .pc.s {
-      top:72px; right:0; transform:rotate(4deg); z-index:2;
-      background:linear-gradient(145deg,#2a1e08,#1a1200);
-      border:1px solid rgba(212,160,23,.3);
-    }
-    .pc:hover { transform:rotate(0deg) translateY(-8px) !important; z-index:10 !important; transition:transform .3s; }
-
-    .pc-chip {
+    .pcard.c { top:0; left:0; transform:rotate(-5deg); z-index:1; }
+    .pcard.s { top:70px; right:0; transform:rotate(4deg); z-index:2;
+      background:linear-gradient(145deg,#0c1c10,#08140c);
+      border-color:rgba(27,94,55,.3); }
+    .pcard:hover { transform:rotate(0deg) translateY(-8px) !important; z-index:10 !important; transition:transform .3s; }
+    .pc-label {
       display:inline-block; font-size:.62rem; font-weight:700;
       letter-spacing:.1em; text-transform:uppercase;
       padding:4px 10px; border-radius:50px; margin-bottom:12px;
     }
-    .c .pc-chip { background:rgba(76,175,122,.15); color:var(--gr4); }
-    .s .pc-chip { background:rgba(212,160,23,.15); color:var(--g3); }
-
-    .pc-title { font-family:var(--serif); font-size:1rem; font-weight:700; color:white; margin-bottom:12px; }
-
+    .c .pc-label { background:rgba(200,150,42,.15); color:var(--gold2); }
+    .s .pc-label { background:rgba(76,175,122,.12); color:var(--green3); }
+    .pc-title { font-family:var(--display); font-size:.95rem; font-weight:800; color:var(--cream); margin-bottom:12px; }
     .pc-row {
       height:38px; background:rgba(255,255,255,.04);
       border-radius:10px; margin-bottom:7px;
       display:flex; align-items:center; gap:9px; padding:0 10px;
     }
     .pc-dot { width:24px; height:24px; border-radius:7px; flex-shrink:0; font-size:.8rem; display:flex; align-items:center; justify-content:center; }
-    .c .pc-dot { background:rgba(76,175,122,.18); }
-    .s .pc-dot { background:rgba(212,160,23,.18); }
-    .pc-txt { font-size:.68rem; color:rgba(255,255,255,.4); font-weight:500; }
-
+    .c .pc-dot { background:rgba(200,150,42,.2); }
+    .s .pc-dot { background:rgba(76,175,122,.15); }
+    .pc-txt { font-size:.68rem; color:rgba(245,242,235,.45); font-weight:500; }
     .pc-btn {
-      width:100%; margin-top:12px; padding:10px; border-radius:10px;
-      font-size:.7rem; font-weight:800; text-align:center; letter-spacing:.04em;
+      width:100%; margin-top:12px; padding:10px;
+      border-radius:10px; font-size:.7rem; font-weight:800;
+      text-align:center; letter-spacing:.04em;
     }
-    .c .pc-btn { background:linear-gradient(135deg,var(--gr3),var(--gr2)); color:white; }
-    .s .pc-btn { background:linear-gradient(135deg,var(--g2),var(--g1)); color:white; }
+    .c .pc-btn { background:var(--gold); color:var(--ink); }
+    .s .pc-btn { background:rgba(27,94,55,.85); color:#fff; }
 
-    /* ══════════ STATS BAND ══════════ */
+    /* ═══ STATS BAND ═══ */
     .band {
-      background:linear-gradient(135deg, var(--g5) 0%, var(--white) 100%);
-      border-top:1px solid var(--border); border-bottom:1px solid var(--border);
+      background:var(--ink);
+      border-bottom:1px solid rgba(255,255,255,.05);
     }
-    .band-in {
+    .band-inner {
       max-width:1180px; margin:0 auto; padding:0 32px;
       display:grid; grid-template-columns:repeat(4,1fr);
     }
-    .bi {
-      padding:36px 0; text-align:center;
-      border-right:1px solid var(--border);
+    .band-item {
+      padding:34px 0; text-align:center;
+      border-right:1px solid rgba(255,255,255,.05);
     }
-    .bi:last-child { border-right:none; }
-    .bi-n { font-family:var(--serif); font-size:2.4rem; font-weight:700; color:var(--text); line-height:1; }
-    .bi-n em { color:var(--g1); font-style:normal; }
-    .bi-l { font-size:.7rem; color:var(--muted); text-transform:uppercase; letter-spacing:.09em; margin-top:4px; }
+    .band-item:last-child { border-right:none; }
+    .band-num { font-family:var(--display); font-size:2.2rem; font-weight:800; color:var(--cream); }
+    .band-num span { color:var(--gold2); }
+    .band-lbl { font-size:.72rem; color:rgba(245,242,235,.28); text-transform:uppercase; letter-spacing:.09em; margin-top:3px; }
 
-    /* ══════════ SECTIONS ══════════ */
+    /* ═══ SHARED SECTION STYLES ═══ */
     .sec { max-width:1180px; margin:0 auto; padding:96px 32px; }
-    .eyebrow {
-      display:inline-flex; align-items:center; gap:8px;
-      font-size:.72rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
-      color:var(--g1); margin-bottom:14px;
+    .eyebrow { font-size:.72rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; }
+    .sec-title {
+      font-family:var(--display); font-weight:800;
+      font-size:clamp(2rem,3.8vw,3.1rem);
+      letter-spacing:-.035em; line-height:1.08; margin-bottom:16px;
     }
-    .eyebrow::before { content:''; width:18px; height:1px; background:var(--g2); }
-    .sec-h {
-      font-family:var(--serif); font-weight:700;
-      font-size:clamp(2rem,3.8vw,3.2rem);
-      letter-spacing:.01em; line-height:1.1; margin-bottom:16px; color:var(--text);
-    }
-    .sec-p { color:var(--muted); font-size:.97rem; font-weight:300; line-height:1.78; max-width:520px; }
+    .sec-sub { color:var(--muted); font-size:.97rem; font-weight:300; line-height:1.78; max-width:500px; }
 
-    /* ══════════ DOWNLOAD ══════════ */
-    .dl-bg {
-      background:var(--gr1);
-      position:relative; overflow:hidden;
-    }
-    .dl-bg::before {
-      content:''; position:absolute; inset:0;
-      background:radial-gradient(ellipse at 20% 50%, rgba(212,160,23,.08), transparent 60%),
-                 radial-gradient(ellipse at 80% 30%, rgba(76,175,122,.08), transparent 50%);
-    }
-    .dl-bg .eyebrow { color:var(--g3); }
-    .dl-bg .sec-h { color:var(--white); }
-    .dl-bg .sec-p { color:rgba(255,255,255,.45); }
-    .dl-bg .eyebrow::before { background:var(--g3); }
+    /* ═══ DOWNLOAD ═══ */
+    .dl-bg { background:var(--warm); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+    .dl-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:56px; }
 
-    .dl-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:56px; position:relative; z-index:1; }
-
-    .dc {
+    .dl-card {
       border-radius:28px; overflow:hidden; position:relative;
       transition:transform .3s, box-shadow .3s;
     }
-    .dc:hover { transform:translateY(-7px); box-shadow:0 32px 80px rgba(0,0,0,.3); }
-    .dc-body { padding:48px 44px; }
+    .dl-card:hover { transform:translateY(-7px); box-shadow:0 28px 72px rgba(0,0,0,.16); }
+    .dl-card-body { padding:48px 44px; }
+    .dl-card.cust { background:var(--ink); }
+    .dl-card.sal  { background:var(--green); }
 
-    .dc.cust {
-      background:linear-gradient(145deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
-      border:1px solid rgba(212,160,23,.25);
-    }
-    .dc.sal {
-      background:linear-gradient(145deg, rgba(212,160,23,.12), rgba(212,160,23,.06));
-      border:1px solid rgba(212,160,23,.35);
-    }
-
-    .dc-chip {
+    .dl-chip {
       display:inline-flex; align-items:center; gap:6px;
-      font-size:.65rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase;
+      font-size:.66rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase;
       padding:6px 14px; border-radius:50px; margin-bottom:28px;
     }
-    .cust .dc-chip { background:rgba(76,175,122,.15); color:var(--gr4); border:1px solid rgba(76,175,122,.25); }
-    .sal .dc-chip  { background:rgba(212,160,23,.18); color:var(--g3); border:1px solid rgba(212,160,23,.35); }
+    .cust .dl-chip { background:rgba(200,150,42,.15); color:var(--gold2); border:1px solid rgba(200,150,42,.22); }
+    .sal .dl-chip  { background:rgba(255,255,255,.1); color:rgba(255,255,255,.7); border:1px solid rgba(255,255,255,.14); }
 
-    .dc-icon {
-      width:64px; height:64px; border-radius:18px;
-      display:flex; align-items:center; justify-content:center; font-size:1.8rem;
+    .dl-icon {
+      width:62px; height:62px; border-radius:18px;
+      display:flex; align-items:center; justify-content:center; font-size:1.7rem;
       margin-bottom:22px;
     }
-    .cust .dc-icon { background:rgba(76,175,122,.12); }
-    .sal .dc-icon  { background:rgba(212,160,23,.12); }
+    .cust .dl-icon { background:rgba(200,150,42,.13); }
+    .sal .dl-icon  { background:rgba(255,255,255,.1); }
 
-    .dc-title { font-family:var(--serif); font-size:2rem; font-weight:700; color:white; letter-spacing:.01em; line-height:1.05; margin-bottom:12px; }
-    .dc-desc  { font-size:.9rem; font-weight:300; line-height:1.72; color:rgba(255,255,255,.45); margin-bottom:32px; }
+    .dl-title {
+      font-family:var(--display); font-size:1.75rem; font-weight:800;
+      color:var(--cream); letter-spacing:-.03em; line-height:1.08; margin-bottom:12px;
+    }
+    .dl-desc { font-size:.9rem; font-weight:300; line-height:1.72; margin-bottom:32px; }
+    .cust .dl-desc { color:rgba(245,242,235,.45); }
+    .sal .dl-desc  { color:rgba(255,255,255,.5); }
 
-    .dc-list { list-style:none; margin-bottom:38px; }
-    .dc-list li { display:flex; align-items:flex-start; gap:10px; font-size:.87rem; color:rgba(255,255,255,.55); margin-bottom:9px; }
-    .dc-list li::before {
+    .dl-list { list-style:none; margin-bottom:38px; }
+    .dl-list li {
+      display:flex; align-items:flex-start; gap:10px;
+      font-size:.87rem; margin-bottom:9px;
+    }
+    .cust .dl-list li { color:rgba(245,242,235,.6); }
+    .sal .dl-list li  { color:rgba(255,255,255,.6); }
+    .dl-list li::before {
       content:'✓'; width:20px; height:20px; border-radius:50%;
       display:flex; align-items:center; justify-content:center;
       font-size:.65rem; font-weight:800; flex-shrink:0; margin-top:1px;
     }
-    .cust .dc-list li::before { background:rgba(76,175,122,.2); color:var(--gr4); }
-    .sal  .dc-list li::before { background:rgba(212,160,23,.2); color:var(--g3); }
+    .cust .dl-list li::before { background:rgba(200,150,42,.18); color:var(--gold2); }
+    .sal .dl-list li::before  { background:rgba(255,255,255,.12); color:#fff; }
 
     .btn-dl {
       display:inline-flex; align-items:center; gap:11px;
-      font-family:var(--sans); font-weight:700; font-size:.9rem;
-      padding:16px 32px; border-radius:50px; text-decoration:none;
-      letter-spacing:.02em; transition:opacity .18s, transform .2s;
+      font-family:var(--display); font-weight:800; font-size:.9rem;
+      padding:15px 32px; border-radius:50px; text-decoration:none;
+      letter-spacing:.02em; transition:opacity .18s, transform .18s; border:none; cursor:pointer;
     }
     .btn-dl:hover { opacity:.88; transform:translateY(-2px); }
-    .cust .btn-dl { background:linear-gradient(135deg,var(--gr3),var(--gr2)); color:white; box-shadow:0 6px 20px rgba(27,94,55,.4); }
-    .sal  .btn-dl { background:linear-gradient(135deg,var(--g2),var(--g1)); color:white; box-shadow:0 6px 20px rgba(180,134,11,.4); }
+    .cust .btn-dl { background:var(--gold); color:var(--ink); }
+    .sal .btn-dl  { background:rgba(255,255,255,.95); color:var(--green); }
 
-    .dc-note { display:block; margin-top:10px; font-size:.77rem; color:rgba(255,255,255,.22); font-style:italic; }
-    .dc-blob { position:absolute; bottom:-60px; right:-60px; width:220px; height:220px; border-radius:50%; opacity:.06; }
-    .cust .dc-blob { background:var(--gr4); }
-    .sal  .dc-blob { background:var(--g3); }
+    .dl-note { display:block; margin-top:10px; font-size:.78rem; font-style:italic; }
+    .cust .dl-note { color:rgba(245,242,235,.25); }
+    .sal .dl-note  { color:rgba(255,255,255,.25); }
 
-    /* ══════════ HOW IT WORKS ══════════ */
-    .how-bg { background:var(--off); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+    .dl-bg-blob {
+      position:absolute; bottom:-50px; right:-50px;
+      width:200px; height:200px; border-radius:50%; opacity:.06;
+    }
+    .cust .dl-bg-blob { background:var(--gold); }
+    .sal .dl-bg-blob  { background:#fff; }
 
+    /* ═══ HOW IT WORKS ═══ */
+    .how-bg { background:var(--cream); }
     .tabs {
-      display:flex; gap:4px; background:var(--white);
+      display:flex; gap:4px; background:var(--warm);
       border:1px solid var(--border); padding:5px; border-radius:50px;
       width:fit-content; margin:44px 0 56px;
-      box-shadow:0 2px 12px rgba(0,0,0,.05);
     }
     .tab {
       padding:10px 28px; border-radius:50px; font-size:.87rem; font-weight:500;
-      border:none; cursor:pointer; background:transparent; color:var(--muted); transition:all .2s;
+      border:none; cursor:pointer; background:transparent; color:var(--muted);
+      transition:all .2s;
     }
-    .tab.on { background:linear-gradient(135deg,var(--g2),var(--g1)); color:white; font-weight:700; box-shadow:0 4px 14px rgba(180,134,11,.3); }
-
+    .tab.on { background:var(--ink); color:var(--cream); font-weight:700; }
     .tc { display:none; }
     .tc.on { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
-
-    .hc {
-      background:var(--white); border:1px solid var(--border); border-radius:22px;
-      padding:32px 28px; position:relative; overflow:hidden;
-      transition:border-color .2s, box-shadow .2s, transform .2s;
+    .how-card {
+      background:var(--white); border:1px solid var(--border); border-radius:20px;
+      padding:30px 26px; position:relative; overflow:hidden;
+      transition:border-color .2s, box-shadow .2s;
     }
-    .hc:hover { border-color:var(--g2); box-shadow:0 8px 32px rgba(180,134,11,.1); transform:translateY(-3px); }
-
-    .hc-n {
-      font-family:var(--serif); font-size:4rem; font-weight:700;
-      color:rgba(180,134,11,.07); position:absolute; top:14px; right:18px; line-height:1;
+    .how-card:hover { border-color:#c0bab0; box-shadow:0 8px 32px rgba(0,0,0,.06); }
+    .how-n {
+      font-family:var(--display); font-size:3.5rem; font-weight:800;
+      color:rgba(0,0,0,.04); position:absolute; top:14px; right:18px; line-height:1;
     }
-    .hc-icon {
-      width:48px; height:48px; border-radius:14px;
-      background:linear-gradient(135deg,var(--g4),var(--g5));
-      border:1px solid rgba(180,134,11,.2);
-      display:flex; align-items:center; justify-content:center; font-size:1.35rem;
+    .how-icon {
+      width:46px; height:46px; background:var(--warm); border-radius:13px;
+      display:flex; align-items:center; justify-content:center; font-size:1.3rem;
       margin-bottom:18px;
     }
-    .hc h3 { font-family:var(--serif); font-size:1.15rem; font-weight:700; margin-bottom:8px; color:var(--text); }
-    .hc p  { font-size:.87rem; color:var(--muted); line-height:1.65; font-weight:300; }
+    .how-card h3 { font-family:var(--display); font-size:1.05rem; font-weight:800; margin-bottom:8px; }
+    .how-card p { font-size:.87rem; color:var(--muted); line-height:1.65; font-weight:300; }
 
-    /* ══════════ FEATURES ══════════ */
-    .feat-bg { background:var(--white); }
+    /* ═══ FEATURES ═══ */
+    .feat-bg { background:var(--ink); }
+    .feat-bg .eyebrow { color:var(--gold2); }
+    .feat-bg .sec-title { color:var(--cream); }
+    .feat-bg .sec-sub { color:rgba(245,242,235,.35); }
     .feat-grid {
       display:grid; grid-template-columns:repeat(3,1fr);
-      border:1px solid var(--border); border-radius:24px; overflow:hidden;
+      border:1px solid rgba(255,255,255,.05); border-radius:22px; overflow:hidden;
       margin-top:60px;
-      box-shadow:0 4px 40px rgba(0,0,0,.04);
     }
     .fc {
       padding:36px 30px;
-      border-right:1px solid var(--border);
-      border-bottom:1px solid var(--border);
+      border-right:1px solid rgba(255,255,255,.04);
+      border-bottom:1px solid rgba(255,255,255,.04);
       transition:background .2s;
     }
-    .fc:hover { background:var(--g5); }
+    .fc:hover { background:rgba(255,255,255,.03); }
     .fc:nth-child(3n) { border-right:none; }
     .fc:nth-last-child(-n+3) { border-bottom:none; }
-    .fc-em { font-size:1.6rem; margin-bottom:14px; }
-    .fc h4 { font-family:var(--serif); font-size:1rem; font-weight:700; color:var(--text); margin-bottom:7px; }
-    .fc p  { font-size:.83rem; color:var(--muted); line-height:1.6; font-weight:300; }
+    .fc-em { font-size:1.5rem; margin-bottom:14px; }
+    .fc h4 { font-family:var(--display); font-size:.92rem; font-weight:800; color:var(--cream); margin-bottom:7px; }
+    .fc p { font-size:.82rem; color:rgba(245,242,235,.3); line-height:1.6; font-weight:300; }
 
-    /* ══════════ APP FEATURES LIST ══════════ */
-    .apps-bg { background:var(--gr5); border-top:1px solid rgba(27,94,55,.12); border-bottom:1px solid rgba(27,94,55,.12); }
-    .apps-grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; margin-top:56px; }
-    .app-col-head { display:flex; align-items:center; gap:12px; margin-bottom:20px; }
-    .app-col-ico {
-      width:46px; height:46px; border-radius:13px;
-      display:flex; align-items:center; justify-content:center; font-size:1.25rem;
+    /* ═══ APPS OVERVIEW ═══ */
+    .apps-bg { background:var(--warm); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+    .apps-grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start; margin-top:56px; }
+    .app-col { }
+    .app-col-head {
+      display:flex; align-items:center; gap:12px; margin-bottom:18px;
     }
-    .app-col-ico.g { background:linear-gradient(135deg,var(--g4),var(--g5)); border:1px solid rgba(180,134,11,.2); }
-    .app-col-ico.gr { background:linear-gradient(135deg,var(--gr5),#d5ede0); border:1px solid rgba(27,94,55,.15); }
-    .app-col h3 { font-family:var(--serif); font-size:1.3rem; font-weight:700; color:var(--text); }
-    .afl { list-style:none; }
-    .afl li {
+    .app-col-icon {
+      width:44px; height:44px; border-radius:12px;
+      display:flex; align-items:center; justify-content:center; font-size:1.2rem;
+    }
+    .app-col-icon.cust { background:rgba(200,150,42,.15); }
+    .app-col-icon.sal  { background:rgba(27,94,55,.15); }
+    .app-col h3 { font-family:var(--display); font-size:1.15rem; font-weight:800; }
+    .app-feature-list { list-style:none; }
+    .app-feature-list li {
       display:flex; align-items:flex-start; gap:10px;
-      padding:9px 0; border-bottom:1px solid rgba(27,94,55,.1);
-      font-size:.88rem; color:var(--muted); line-height:1.5;
+      padding:10px 0; border-bottom:1px solid var(--border);
+      font-size:.88rem; color:var(--muted); font-weight:400; line-height:1.5;
     }
-    .afl li:last-child { border-bottom:none; }
-    .afl li span { color:var(--gr3); font-weight:800; flex-shrink:0; }
+    .app-feature-list li:last-child { border-bottom:none; }
+    .app-feature-list li span { color:var(--green3); font-weight:800; flex-shrink:0; }
 
-    /* ══════════ ABOUT ══════════ */
-    .about-bg { background:var(--white); border-top:1px solid var(--border); }
+    /* ═══ ABOUT ═══ */
+    .about-bg { background:var(--cream); }
     .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
     .about-visual {
-      aspect-ratio:1;
-      border-radius:32px; overflow:hidden;
-      background:linear-gradient(145deg, var(--gr1), var(--gr2));
-      display:flex; align-items:center; justify-content:center;
-      font-size:6rem; position:relative;
-      box-shadow:0 24px 60px rgba(26,74,46,.25);
+      aspect-ratio:1; background:var(--ink);
+      border-radius:28px; display:flex; align-items:center; justify-content:center;
+      font-size:5.5rem; position:relative; overflow:hidden;
     }
     .about-visual::before {
       content:''; position:absolute; inset:0;
-      background:radial-gradient(circle at 35% 35%, rgba(212,160,23,.15), transparent 60%);
-    }
-    .about-visual::after {
-      content:''; position:absolute;
-      bottom:0; left:0; right:0; height:40%;
-      background:linear-gradient(to top, rgba(212,160,23,.08), transparent);
+      background:radial-gradient(circle at 35% 35%, rgba(200,150,42,.13), transparent 60%);
     }
     .about-text p { font-size:.95rem; color:var(--muted); line-height:1.82; margin-bottom:16px; font-weight:300; }
-    .contact-box {
+    .contact-card {
       display:flex; align-items:center; gap:14px;
-      background:var(--g5); border:1px solid rgba(180,134,11,.2);
-      border-radius:16px; padding:18px 22px; margin-top:28px;
+      background:var(--warm); border:1px solid var(--border);
+      border-radius:14px; padding:16px 20px; margin-top:28px;
     }
-    .contact-ico {
-      width:42px; height:42px;
-      background:linear-gradient(135deg,var(--g2),var(--g1));
-      border-radius:11px; display:flex; align-items:center; justify-content:center;
-      font-size:1rem; flex-shrink:0;
-      box-shadow:0 4px 12px rgba(180,134,11,.25);
+    .contact-icon {
+      width:40px; height:40px; background:var(--ink); border-radius:10px;
+      display:flex; align-items:center; justify-content:center; font-size:.95rem; flex-shrink:0;
     }
-    .contact-txt { font-size:.82rem; color:var(--muted); }
-    .contact-txt strong { display:block; font-size:.9rem; color:var(--text); font-weight:600; margin-bottom:2px; }
+    .contact-info { font-size:.82rem; color:var(--muted); }
+    .contact-info strong { display:block; font-size:.9rem; color:var(--ink); font-weight:600; }
 
-    /* ══════════ CTA ══════════ */
+    /* ═══ CTA ═══ */
     .cta-bg {
-      background:linear-gradient(135deg, var(--gr1) 0%, var(--gr2) 60%, #1e5530 100%);
-      padding:100px 32px; text-align:center; position:relative; overflow:hidden;
+      background:var(--gold);
+      padding:96px 32px; text-align:center;
     }
-    .cta-bg::before {
-      content:''; position:absolute; inset:0;
-      background:radial-gradient(ellipse at 50% 0%, rgba(212,160,23,.15), transparent 60%);
+    .cta-bg .eyebrow { color:rgba(0,0,0,.38); }
+    .cta-h2 {
+      font-family:var(--display); font-weight:800; color:var(--ink);
+      font-size:clamp(2.4rem,5vw,3.8rem); letter-spacing:-.045em; line-height:1.05; margin-bottom:40px;
     }
-    .cta-bg .eyebrow { color:var(--g3); position:relative; z-index:1; }
-    .cta-bg .eyebrow::before { background:var(--g3); }
-    .cta-h {
-      font-family:var(--serif); font-weight:700; color:white;
-      font-size:clamp(2.4rem,5vw,4rem); letter-spacing:.01em; line-height:1.05;
-      margin-bottom:42px; position:relative; z-index:1;
-    }
-    .cta-h em { color:var(--g3); font-style:normal; }
-    .cta-btns { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; position:relative; z-index:1; }
-
-    .btn-wh {
+    .cta-btns { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+    .btn-cta-blk {
       display:inline-flex; align-items:center; gap:10px;
-      background:white; color:var(--gr2);
-      font-family:var(--sans); font-weight:700; font-size:.9rem;
-      padding:16px 32px; border-radius:50px; text-decoration:none;
-      box-shadow:0 6px 24px rgba(0,0,0,.2);
-      transition:opacity .18s, transform .2s;
+      background:var(--ink); color:var(--cream);
+      font-family:var(--display); font-weight:800; font-size:.9rem;
+      padding:15px 32px; border-radius:50px; text-decoration:none;
+      transition:opacity .18s;
     }
-    .btn-wh:hover { opacity:.92; transform:translateY(-2px); }
-
-    .btn-gold-outline {
+    .btn-cta-blk:hover { opacity:.82; }
+    .btn-cta-grn {
       display:inline-flex; align-items:center; gap:10px;
-      background:linear-gradient(135deg,var(--g2),var(--g1)); color:white;
-      font-family:var(--sans); font-weight:700; font-size:.9rem;
-      padding:16px 32px; border-radius:50px; text-decoration:none;
-      box-shadow:0 6px 24px rgba(180,134,11,.4);
-      transition:opacity .18s, transform .2s;
+      background:var(--green); color:#fff;
+      font-family:var(--display); font-weight:800; font-size:.9rem;
+      padding:15px 32px; border-radius:50px; text-decoration:none;
+      transition:opacity .18s;
     }
-    .btn-gold-outline:hover { opacity:.9; transform:translateY(-2px); }
+    .btn-cta-grn:hover { opacity:.85; }
 
-    /* ══════════ FOOTER ══════════ */
-    footer {
-      background:var(--gr1);
-      border-top:1px solid rgba(212,160,23,.15);
-      padding:64px 32px 32px;
-    }
-    .fi { max-width:1180px; margin:0 auto; }
-    .ft {
+    /* ═══ FOOTER ═══ */
+    footer { background:var(--ink); padding:60px 32px 30px; }
+    .foot-inner { max-width:1180px; margin:0 auto; }
+    .foot-top {
       display:flex; justify-content:space-between; align-items:flex-start;
-      flex-wrap:wrap; gap:44px;
-      padding-bottom:48px; border-bottom:1px solid rgba(212,160,23,.12); margin-bottom:28px;
+      flex-wrap:wrap; gap:40px; padding-bottom:44px;
+      border-bottom:1px solid rgba(255,255,255,.06); margin-bottom:28px;
     }
-    .fl { font-family:var(--serif); font-weight:700; font-size:1.7rem; color:white; text-decoration:none; letter-spacing:.01em; display:flex; align-items:center; gap:10px; }
-    .fl em { color:var(--g3); font-style:normal; }
-    .fl-mark { width:34px; height:34px; background:linear-gradient(135deg,var(--g2),var(--g1)); border-radius:9px; display:flex; align-items:center; justify-content:center; font-size:.95rem; color:white; }
-    .ft-tag { font-size:.83rem; color:rgba(255,255,255,.3); font-weight:300; margin-top:8px; max-width:200px; line-height:1.6; }
-    .fcol h5 { font-size:.68rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:rgba(212,160,23,.5); margin-bottom:14px; }
-    .fcol ul { list-style:none; }
-    .fcol li { margin-bottom:10px; }
-    .fcol a { font-size:.86rem; color:rgba(255,255,255,.4); text-decoration:none; font-weight:300; transition:color .18s; }
-    .fcol a:hover { color:var(--g3); }
-    .fb { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; }
-    .fb-copy { font-size:.77rem; color:rgba(255,255,255,.18); font-weight:300; }
-    .fb-email { font-size:.77rem; color:var(--g2); text-decoration:none; }
-    .fb-email:hover { color:var(--g3); }
+    .foot-logo { font-family:var(--display); font-weight:800; font-size:1.4rem; color:var(--cream); letter-spacing:-.04em; display:flex; align-items:center; gap:8px; text-decoration:none; }
+    .foot-logo em { color:var(--gold); font-style:normal; }
+    .foot-tag { font-size:.83rem; color:rgba(245,242,235,.28); font-weight:300; margin-top:8px; max-width:210px; line-height:1.6; }
+    .foot-col h5 { font-size:.7rem; font-weight:700; letter-spacing:.13em; text-transform:uppercase; color:rgba(245,242,235,.25); margin-bottom:14px; }
+    .foot-col ul { list-style:none; }
+    .foot-col li { margin-bottom:9px; }
+    .foot-col a { font-size:.86rem; color:rgba(245,242,235,.5); text-decoration:none; font-weight:300; transition:color .18s; }
+    .foot-col a:hover { color:var(--cream); }
+    .foot-bottom { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; }
+    .foot-copy { font-size:.77rem; color:rgba(245,242,235,.18); font-weight:300; }
+    .foot-email { font-size:.77rem; color:var(--gold); text-decoration:none; }
 
-    /* ══════════ STICKY ══════════ */
+    /* ═══ STICKY BAR (mobile) ═══ */
     .sticky {
       position:fixed; bottom:0; left:0; right:0;
-      background:rgba(26,74,46,.97); backdrop-filter:blur(20px);
-      border-top:1px solid rgba(212,160,23,.2);
+      background:rgba(8,12,8,.97); backdrop-filter:blur(20px);
+      border-top:1px solid rgba(255,255,255,.07);
       padding:10px 18px 16px;
-      display:none; align-items:center; justify-content:space-between; gap:10px; z-index:800;
+      display:none; align-items:center; justify-content:space-between;
+      gap:10px; z-index:800;
     }
-    .s-txt { font-size:.8rem; color:rgba(255,255,255,.45); }
-    .s-txt strong { color:white; }
-    .s-btns { display:flex; gap:8px; }
-    .s-btn { font-size:.76rem; font-weight:700; padding:9px 18px; border-radius:50px; text-decoration:none; white-space:nowrap; }
-    .s-btn.c { background:linear-gradient(135deg,var(--gr3),var(--gr2)); color:white; }
-    .s-btn.s { background:linear-gradient(135deg,var(--g2),var(--g1)); color:white; }
+    .sticky-txt { font-size:.8rem; color:rgba(245,242,235,.45); }
+    .sticky-txt strong { color:var(--cream); }
+    .sticky-btns { display:flex; gap:7px; }
+    .sticky-btn { font-size:.76rem; font-weight:700; padding:9px 16px; border-radius:50px; text-decoration:none; white-space:nowrap; }
+    .sticky-btn.cust { background:var(--gold); color:var(--ink); }
+    .sticky-btn.sal  { background:var(--green2); color:#fff; }
 
-    /* ══════════ DIVIDER ══════════ */
-    .gold-divider {
-      height:3px;
-      background:linear-gradient(90deg, transparent, var(--g2), var(--g3), var(--g2), transparent);
-    }
-
-    /* ══════════ REVEAL ══════════ */
-    .reveal { opacity:0; transform:translateY(22px); transition:opacity .55s ease, transform .55s ease; }
-    .reveal.visible { opacity:1; transform:translateY(0); }
-
-    /* ══════════ RESPONSIVE ══════════ */
+    /* ═══ RESPONSIVE ═══ */
     @media(max-width:960px){
-      .hero { grid-template-columns:1fr; }
-      .hero-left { padding:60px 24px 80px; text-align:center; }
-      .hero-p,.hero-btns,.hero-stats { margin-left:auto; margin-right:auto; }
-      .hero-btns { justify-content:center; }
-      .hero-stats { justify-content:center; }
-      .hero-right { display:none; }
-      .band-in { grid-template-columns:repeat(2,1fr); }
-      .dl-grid { grid-template-columns:1fr; }
-      .tc.on { grid-template-columns:1fr; }
-      .feat-grid { grid-template-columns:1fr 1fr; }
-      .apps-grid { grid-template-columns:1fr; gap:32px; }
-      .about-grid { grid-template-columns:1fr; }
-      .about-visual { display:none; }
-      .ft { flex-direction:column; }
-      .nl { display:none; }
-      .hamburger { display:block; }
-      .sticky { display:flex; }
-      .sec { padding:72px 20px; }
+      .hero{ grid-template-columns:1fr; }
+      .hero-left{ padding:60px 24px 80px; text-align:center; }
+      .hero-p{ margin-left:auto; margin-right:auto; }
+      .hero-btns{ justify-content:center; }
+      .hero-stats{ justify-content:center; }
+      .hero-right{ display:none; }
+      .band-inner{ grid-template-columns:repeat(2,1fr); }
+      .dl-grid{ grid-template-columns:1fr; }
+      .tc.on{ grid-template-columns:1fr; }
+      .feat-grid{ grid-template-columns:1fr 1fr; }
+      .apps-grid{ grid-template-columns:1fr; gap:32px; }
+      .about-grid{ grid-template-columns:1fr; }
+      .about-visual{ display:none; }
+      .foot-top{ flex-direction:column; }
+      .nav-links{ display:none; }
+      .hamburger{ display:block; }
+      .sticky{ display:flex; }
+      .sec{ padding:72px 20px; }
     }
     @media(max-width:600px){
-      .feat-grid { grid-template-columns:1fr; }
-      .fc:nth-child(3n) { border-right:none; }
-      .band-in { grid-template-columns:1fr 1fr; }
-      .s-txt { display:none; }
-      .dc-body { padding:36px 28px; }
+      .feat-grid{ grid-template-columns:1fr; }
+      .fc:nth-child(3n){ border-right:none; }
+      .fc:nth-child(2n){ border-right:none; }
+      .band-inner{ grid-template-columns:1fr 1fr; }
+      .sticky-txt{ display:none; }
+      .dl-card-body{ padding:36px 28px; }
     }
 
-    /* ══════════ MOBILE OPTIMIZED (≤480px) ══════════ */
-    @media(max-width:480px){
-      /* Nav */
-      .nw { padding:0 16px; height:58px; }
-      .logo { font-size:1.5rem; }
-      .logo-mark { width:32px; height:32px; font-size:.95rem; }
-
-      /* Hero */
-      .hero-left { padding:44px 18px 70px; }
-      .hero-badge { font-size:.65rem; padding:6px 14px; margin-bottom:20px; }
-      .hero-h1 { font-size:clamp(2.6rem,10vw,3.5rem); margin-bottom:16px; }
-      .hero-p { font-size:.9rem; margin-bottom:32px; }
-      .hero-btns { flex-direction:column; gap:10px; width:100%; }
-      .btn-primary, .btn-outline {
-        width:100%; justify-content:center;
-        padding:16px 20px; font-size:.95rem;
-        min-height:52px;
-        border-radius:14px;
-      }
-      .hero-stats { gap:20px; margin-top:36px; }
-      .hs-n { font-size:1.8rem; }
-      .hs-l { font-size:.65rem; }
-
-      /* Stats band */
-      .band-in { grid-template-columns:1fr 1fr; gap:0; }
-      .bi { padding:22px 10px; }
-      .bi-n { font-size:1.8rem; }
-      .bi-l { font-size:.62rem; }
-
-      /* Section */
-      .sec { padding:56px 16px; }
-      .sec-h { font-size:clamp(1.7rem,7vw,2.4rem); }
-      .sec-p { font-size:.88rem; }
-
-      /* Download cards */
-      .dl-grid { gap:16px; }
-      .dc { border-radius:20px; }
-      .dc-body { padding:28px 20px; }
-      .dc-icon { width:52px; height:52px; font-size:1.4rem; margin-bottom:16px; }
-      .dc-title { font-size:1.6rem; }
-      .dc-desc { font-size:.85rem; margin-bottom:22px; }
-      .dc-list li { font-size:.82rem; margin-bottom:7px; }
-      .btn-dl {
-        width:100%; justify-content:center;
-        padding:16px 20px; font-size:.92rem;
-        min-height:54px; border-radius:14px;
-      }
-      .dc-note { font-size:.72rem; text-align:center; margin-top:8px; }
-
-      /* How it works */
-      .tabs { padding:4px; gap:2px; }
-      .tab { padding:10px 16px; font-size:.8rem; }
-      .hc { padding:24px 20px; border-radius:18px; }
-      .hc-icon { font-size:1.8rem; margin-bottom:10px; }
-      .hc h3 { font-size:1rem; }
-      .hc p { font-size:.83rem; }
-
-      /* Features */
-      .fc { padding:22px 18px; }
-      .fc-em { font-size:1.8rem; margin-bottom:10px; }
-      .fc h4 { font-size:.95rem; }
-      .fc p { font-size:.82rem; }
-
-      /* App lists */
-      .afl li { font-size:.83rem; padding:7px 0; }
-
-      /* About */
-      .about-text p { font-size:.88rem; }
-      .contact-box { padding:16px; gap:12px; }
-
-      /* CTA */
-      .cta-bg { padding:64px 16px; }
-      .cta-h { font-size:clamp(1.8rem,7vw,2.6rem); }
-      .cta-btns { flex-direction:column; align-items:center; gap:12px; width:100%; max-width:340px; margin:0 auto; }
-      .btn-wh, .btn-gold-outline {
-        width:100%; justify-content:center;
-        padding:16px 20px; font-size:.92rem;
-        min-height:54px; border-radius:14px;
-      }
-
-      /* Footer */
-      footer { padding:48px 16px 100px; }
-      .ft { gap:28px; }
-      .fb { flex-direction:column; align-items:center; text-align:center; gap:6px; }
-
-      /* Sticky bar */
-      .sticky { padding:10px 14px 20px; gap:8px; }
-      .s-btns { gap:8px; flex:1; }
-      .s-btn {
-        flex:1; text-align:center;
-        font-size:.82rem; padding:12px 10px;
-        border-radius:12px; min-height:46px;
-        display:flex; align-items:center; justify-content:center;
-      }
-
-      /* Hamburger menu */
-      .nl.open {
-        display:flex !important;
-        flex-direction:column;
-        position:fixed; top:58px; left:0; right:0;
-        background:rgba(255,255,255,.98);
-        backdrop-filter:blur(20px);
-        padding:20px 20px 28px;
-        border-bottom:1px solid var(--border);
-        box-shadow:0 8px 32px rgba(0,0,0,.1);
-        gap:4px; z-index:899;
-      }
-      .nl.open li { width:100%; }
-      .nl.open a {
-        display:block; padding:12px 16px;
-        font-size:.95rem; border-radius:10px;
-        color:var(--text) !important;
-      }
-      .nl.open .cta {
-        margin-top:8px;
-        background:linear-gradient(135deg,var(--g2),var(--g1)) !important;
-        color:white !important; text-align:center;
-      }
-    }
+    /* scroll reveal */
+    .reveal { opacity:0; transform:translateY(22px); transition:opacity .55s ease, transform .55s ease; }
+    .reveal.visible { opacity:1; transform:translateY(0); }
   </style>
 </head>
 <body>
 
-<!-- ══ NAV ══ -->
+<!-- ══════════ NAV ══════════ -->
 <nav>
-  <div class="nw">
-    <a href="#" class="logo">
-      <div class="logo-mark">✂</div>
-      Quick<span>Cut</span>
-    </a>
-    <ul class="nl">
+  <div class="nav-wrap">
+    <a href="#" class="logo"><div class="logo-mark">✂</div>Quick<em>Cut</em></a>
+    <ul class="nav-links">
       <li><a href="#download">Download</a></li>
       <li><a href="#how">How It Works</a></li>
       <li><a href="#features">Features</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="#download" class="cta">Get Free App</a></li>
+      <li><a href="#download" class="nav-dl">Get Free App</a></li>
     </ul>
-    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <button class="hamburger" onclick="toggleMobileMenu()">☰</button>
   </div>
 </nav>
 
-<!-- ══ HERO ══ -->
+<!-- ══════════ HERO ══════════ -->
 <section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-lines"></div>
+  <div class="hero-gfx"></div>
+  <div class="hero-grid"></div>
 
   <div class="hero-left">
-    <div class="hero-badge">India's #1 Salon Booking Platform</div>
+    <div class="hero-chip">India's Salon Booking Platform</div>
     <h1 class="hero-h1">
-      <span class="h1-w">Your Next</span>
-      <span class="h1-g">Haircut,</span>
-      <span class="h1-o">Booked.</span>
+      <span class="white">Your Next</span>
+      <span class="gold">Haircut,</span>
+      <span class="ghost">Booked.</span>
     </h1>
-    <p class="hero-p">QuickCut connects customers with top nearby salons — GPS-powered discovery, instant booking, UPI payment. Plus a complete management system for salon owners.</p>
+    <p class="hero-p">QuickCut connects customers with top salons nearby — GPS-based discovery, instant slot booking, UPI payment. And for salon owners, a complete business management system.</p>
     <div class="hero-btns">
-      <a href="#download" class="btn-primary">
+      <a href="#download" class="btn-gold">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M5 20h14v-2H5v2zm7-18L5.33 9h3.84v6h5.66V9h3.84L12 2z"/></svg>
         Download Free App
       </a>
-      <a href="#how" class="btn-outline">How It Works →</a>
+      <a href="#how" class="btn-ghost">See How It Works →</a>
     </div>
     <div class="hero-stats">
-      <div><div class="hs-n">500<em>+</em></div><div class="hs-l">Salons</div></div>
-      <div><div class="hs-n">10K<em>+</em></div><div class="hs-l">Downloads</div></div>
-      <div><div class="hs-n">4.8<em>★</em></div><div class="hs-l">Rating</div></div>
+      <div><div class="hs-num">500<span>+</span></div><div class="hs-label">Salons</div></div>
+      <div><div class="hs-num">10K<span>+</span></div><div class="hs-label">Downloads</div></div>
+      <div><div class="hs-num">4.8<span>★</span></div><div class="hs-label">Rating</div></div>
     </div>
   </div>
 
   <div class="hero-right">
-    <div class="ps">
-      <div class="pc c">
-        <div class="pc-chip">Customer App</div>
+    <div class="phone-stack">
+      <!-- Customer card -->
+      <div class="pcard c">
+        <div class="pc-label">Customer App</div>
         <div class="pc-title">Book a Salon</div>
-        <div class="pc-row"><div class="pc-dot">💈</div><div class="pc-txt">Royal Cuts — ⭐4.9 · 0.3km</div></div>
-        <div class="pc-row"><div class="pc-dot">✂️</div><div class="pc-txt">Style Zone — ⭐4.8 · 0.6km</div></div>
-        <div class="pc-row"><div class="pc-dot">🪒</div><div class="pc-txt">GlowUp Barbers · 0.9km</div></div>
+        <div class="pc-row"><div class="pc-dot">💈</div><div class="pc-txt">Royal Cuts — ⭐4.9 · 0.3km away</div></div>
+        <div class="pc-row"><div class="pc-dot">✂️</div><div class="pc-txt">Style Zone — ⭐4.8 · 0.6km away</div></div>
+        <div class="pc-row"><div class="pc-dot">🪒</div><div class="pc-txt">GlowUp Barbers · 0.9km away</div></div>
         <div class="pc-btn">Book Slot Now →</div>
       </div>
-      <div class="pc s">
-        <div class="pc-chip">Salon Owner App</div>
+      <!-- Salon card -->
+      <div class="pcard s">
+        <div class="pc-label">Salon Owner App</div>
         <div class="pc-title">Manage Salon</div>
-        <div class="pc-row"><div class="pc-dot">📅</div><div class="pc-txt">Today: 12 Bookings</div></div>
+        <div class="pc-row"><div class="pc-dot">📅</div><div class="pc-txt">Today: 12 Bookings confirmed</div></div>
         <div class="pc-row"><div class="pc-dot">💰</div><div class="pc-txt">Revenue: ₹3,240 today</div></div>
-        <div class="pc-row"><div class="pc-dot">⏳</div><div class="pc-txt">Queue: 3 waiting</div></div>
+        <div class="pc-row"><div class="pc-dot">⏳</div><div class="pc-txt">Queue: 3 customers waiting</div></div>
         <div class="pc-btn">Open Dashboard →</div>
       </div>
     </div>
   </div>
-
-  <div class="hero-wave">
-    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
-    </svg>
-  </div>
 </section>
 
-<!-- ══ GOLD DIVIDER ══ -->
-<div class="gold-divider"></div>
-
-<!-- ══ STATS BAND ══ -->
+<!-- ══════════ STATS BAND ══════════ -->
 <div class="band">
-  <div class="band-in">
-    <div class="bi"><div class="bi-n">500<em>+</em></div><div class="bi-l">Salons Listed</div></div>
-    <div class="bi"><div class="bi-n">10K<em>+</em></div><div class="bi-l">App Downloads</div></div>
-    <div class="bi"><div class="bi-n">₹<em>0</em></div><div class="bi-l">Forever Free</div></div>
-    <div class="bi"><div class="bi-n">2<em> Apps</em></div><div class="bi-l">Customer + Salon</div></div>
+  <div class="band-inner">
+    <div class="band-item"><div class="band-num">500<span>+</span></div><div class="band-lbl">Salons Listed</div></div>
+    <div class="band-item"><div class="band-num">10K<span>+</span></div><div class="band-lbl">App Downloads</div></div>
+    <div class="band-item"><div class="band-num">₹0</div><div class="band-lbl">Forever Free</div></div>
+    <div class="band-item"><div class="band-num">3<span> Apps</span></div><div class="band-lbl">Customer + Salon + Agent</div></div>
   </div>
 </div>
 
-<!-- ══ DOWNLOAD ══ -->
+<!-- ══════════ DOWNLOAD ══════════ -->
 <div class="dl-bg" id="download">
   <div class="sec">
-    <div class="eyebrow reveal">Two Apps. One Ecosystem.</div>
-    <h2 class="sec-h reveal">Download QuickCut<br/>for Your Role</h2>
-    <p class="sec-p reveal">Whether you're a customer looking for a great haircut, or a salon owner building your business — we have the perfect free app for you.</p>
+    <div class="eyebrow reveal">Three Apps. One Ecosystem.</div>
+    <h2 class="sec-title reveal">Download QuickCut<br/>for Your Role</h2>
+    <p class="sec-sub reveal">Whether you're a customer, salon owner, or an on-ground agent — we have the perfect free app for you.</p>
 
-    <div class="dl-grid">
-      <div class="dc cust reveal">
-        <div class="dc-body">
-          <div class="dc-chip">✦ For Customers</div>
-          <div class="dc-icon">👤</div>
-          <h3 class="dc-title">Customer App</h3>
-          <p class="dc-desc">Find the best salons near you, pick a slot, pay online, and walk straight into the chair — no waiting in line, ever.</p>
-          <ul class="dc-list">
+    <div class="dl-grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr));">
+
+      <!-- CUSTOMER APP -->
+      <div class="dl-card cust reveal">
+        <div class="dl-card-body">
+          <div class="dl-chip">✦ For Customers</div>
+          <div class="dl-icon">👤</div>
+          <h3 class="dl-title">Customer App</h3>
+          <p class="dl-desc">Find the best salons near you, pick a slot, pay online, and walk straight into the chair. No waiting in line, ever.</p>
+          <ul class="dl-list">
             <li>GPS-based salon discovery (5–20km radius)</li>
             <li>Sort by nearest, rating, or open now</li>
             <li>Instant slot booking — no phone calls</li>
-            <li>UPI / QR code secure payment</li>
+            <li>UPI / QR code payment</li>
             <li>Live booking confirmation & reminders</li>
             <li>Cancel up to 2 hours before appointment</li>
             <li>Google Maps directions to salon</li>
           </ul>
-          <a href="https://clever-meringue-9765a3.netlify.app/" class="btn-dl">
+          <a href="https://boisterous-choux-9c95e1.netlify.app/" target="_blank" class="btn-dl">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M5 20h14v-2H5v2zm7-18L5.33 9h3.84v6h5.66V9h3.84L12 2z"/></svg>
             Download Customer App
           </a>
-          <span class="dc-note">📱 Android APK · Free</span>
+          <span class="dl-note">📱 Android APK · Free · No login to browse</span>
         </div>
-        <div class="dc-blob"></div>
+        <div class="dl-bg-blob"></div>
       </div>
 
-      <div class="dc sal reveal">
-        <div class="dc-body">
-          <div class="dc-chip">✦ For Salon Owners</div>
-          <div class="dc-icon">💈</div>
-          <h3 class="dc-title">Salon Owner App</h3>
-          <p class="dc-desc">Run your entire salon from your phone. Accept bookings, manage queue, track earnings, and grow your business intelligently.</p>
-          <ul class="dc-list">
+      <!-- SALON APP -->
+      <div class="dl-card sal reveal">
+        <div class="dl-card-body">
+          <div class="dl-chip">✦ For Salon Owners</div>
+          <div class="dl-icon">💈</div>
+          <h3 class="dl-title">Salon Owner App</h3>
+          <p class="dl-desc">Run your entire salon from your phone. Accept bookings, manage your queue, track earnings, and grow your business intelligently.</p>
+          <ul class="dl-list">
             <li>Accept / reject customer bookings instantly</li>
             <li>Add, edit & manage all your services</li>
             <li>Online / Offline toggle with one tap</li>
             <li>Block time slots for breaks or holidays</li>
             <li>Daily revenue with commission breakdown</li>
-            <li>Monthly earnings report & analytics</li>
-            <li>GPS location — appear in nearby search</li>
+            <li>Monthly earnings report</li>
+            <li>GPS location — appear on nearby search</li>
           </ul>
-          <a href="https://peaceful-tulumba-d71f1c.netlify.app" class="btn-dl">
+          <a href="https://dashing-cajeta-7c06c8.netlify.app/" target="_blank" class="btn-dl">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M5 20h14v-2H5v2zm7-18L5.33 9h3.84v6h5.66V9h3.84L12 2z"/></svg>
             Download Salon App
           </a>
-          <span class="dc-note">📱 Android APK · Free</span>
+          <span class="dl-note">📱 Android APK · Free · Grow your business</span>
         </div>
-        <div class="dc-blob"></div>
+        <div class="dl-bg-blob"></div>
       </div>
+
+      <!-- AGENT APP -->
+      <div class="dl-card sal reveal" style="background:linear-gradient(145deg,rgba(26,74,46,0.9),rgba(15,45,28,0.95));border:1px solid rgba(212,160,23,.28);">
+        <div class="dl-card-body">
+          <div class="dl-chip" style="background:rgba(212,160,23,.15);color:#f0c040;border:1px solid rgba(212,160,23,.3);">✦ For Field Agents</div>
+          <div class="dl-icon" style="background:rgba(212,160,23,.12);">🤝</div>
+          <h3 class="dl-title">Agent App</h3>
+          <p class="dl-desc">Be the bridge between QuickCut and local salons. Register new salons, build the network, and earn commission on every salon you onboard.</p>
+          <ul class="dl-list">
+            <li>Agent login & secure dashboard</li>
+            <li>Register new salons to the platform</li>
+            <li>Track all salons you've onboarded</li>
+            <li>Commission tracking per salon added</li>
+            <li>Real-time onboarding status updates</li>
+            <li>Help salons get approved & go live</li>
+            <li>Grow your network, grow your income</li>
+          </ul>
+          <a href="https://beamish-dragon-e54e9f.netlify.app/" target="_blank" class="btn-dl" style="background:linear-gradient(135deg,#d4a017,#b8860b);color:white;box-shadow:0 6px 20px rgba(180,134,11,.4);">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M5 20h14v-2H5v2zm7-18L5.33 9h3.84v6h5.66V9h3.84L12 2z"/></svg>
+            Open Agent App
+          </a>
+          <span class="dl-note">🌐 Web App · Free · For field agents only</span>
+        </div>
+        <div class="dl-bg-blob"></div>
+      </div>
+
     </div>
   </div>
 </div>
 
-<!-- ══ HOW IT WORKS ══ -->
+<!-- ══════════ HOW IT WORKS ══════════ -->
 <div class="how-bg" id="how">
   <div class="sec">
     <div class="eyebrow reveal">Simple Process</div>
-    <h2 class="sec-h reveal">How QuickCut Works</h2>
-    <p class="sec-p reveal">Designed to save time for customers and grow business for salon owners — in just a few taps.</p>
+    <h2 class="sec-title reveal">How QuickCut Works</h2>
+    <p class="sec-sub reveal">Designed to save time for customers and grow business for salon owners — in just a few taps.</p>
 
     <div class="tabs reveal">
-      <button class="tab on" onclick="switchTab('cu')">For Customers</button>
-      <button class="tab" onclick="switchTab('sa')">For Salon Owners</button>
+      <button class="tab on" onclick="switchTab('cust')">For Customers</button>
+      <button class="tab" onclick="switchTab('sal')">For Salon Owners</button>
     </div>
 
-    <div class="tc on" id="tc-cu">
-      <div class="hc"><div class="hc-n">01</div><div class="hc-icon">📍</div><h3>Find Nearby Salons</h3><p>Allow location and instantly see top-rated salons near you — sorted by distance, ratings, services and open status.</p></div>
-      <div class="hc"><div class="hc-n">02</div><div class="hc-icon">📅</div><h3>Book Your Slot</h3><p>Choose a service, pick a time slot, and confirm with UPI payment — all in under 2 minutes. No phone calls needed.</p></div>
-      <div class="hc"><div class="hc-n">03</div><div class="hc-icon">✂️</div><h3>Walk In & Sit Down</h3><p>Arrive at your booked time with your booking code. Chair is ready and waiting — zero queue, perfect service.</p></div>
+    <div class="tc on" id="tc-cust">
+      <div class="how-card"><div class="how-n">01</div><div class="how-icon">📍</div><h3>Find Nearby Salons</h3><p>Open the app, allow location. Instantly see top-rated salons near you sorted by distance, with ratings, services, and open status.</p></div>
+      <div class="how-card"><div class="how-n">02</div><div class="how-icon">📅</div><h3>Book Your Slot</h3><p>Choose a service, pick a time slot that works for you, and confirm with UPI payment — all in under 2 minutes. No phone calls needed.</p></div>
+      <div class="how-card"><div class="how-n">03</div><div class="how-icon">✂️</div><h3>Walk In & Sit Down</h3><p>Arrive at your booked time with your booking code. Your chair is ready and waiting — zero queue, perfect service every time.</p></div>
     </div>
 
-    <div class="tc" id="tc-sa">
-      <div class="hc"><div class="hc-n">01</div><div class="hc-icon">🏪</div><h3>Register Your Salon</h3><p>Download the Salon App, add your shop details, services, prices and hours. Go live and appear in local search in minutes.</p></div>
-      <div class="hc"><div class="hc-n">02</div><div class="hc-icon">🔔</div><h3>Accept Bookings</h3><p>Get instant notifications when customers book. Accept, manage, or reschedule from a clean dashboard.</p></div>
-      <div class="hc"><div class="hc-n">03</div><div class="hc-icon">📈</div><h3>Track & Grow</h3><p>See daily revenue, booking trends, and customer data. Understand peak hours and monthly earnings — all in the app.</p></div>
+    <div class="tc" id="tc-sal">
+      <div class="how-card"><div class="how-n">01</div><div class="how-icon">🏪</div><h3>Register Your Salon</h3><p>Download the Salon App, enter your shop details, set your services, prices and working hours. Go live and appear in local search in minutes.</p></div>
+      <div class="how-card"><div class="how-n">02</div><div class="how-icon">🔔</div><h3>Accept Bookings</h3><p>Get instant notifications when customers book. Accept, manage, or reschedule from a clean dashboard. Handle walk-ins and bookings in one place.</p></div>
+      <div class="how-card"><div class="how-n">03</div><div class="how-icon">📈</div><h3>Track & Grow</h3><p>See daily revenue, booking trends, and customer data. Understand your peak hours, top services, and monthly earnings — all in the app.</p></div>
     </div>
   </div>
 </div>
 
-<!-- ══ FEATURES ══ -->
+<!-- ══════════ FEATURES ══════════ -->
 <div class="feat-bg" id="features">
   <div class="sec">
     <div class="eyebrow reveal">Platform Features</div>
-    <h2 class="sec-h reveal">Built for the<br/>Indian Salon Industry</h2>
-    <p class="sec-p reveal">Every feature was built because real salon owners and customers asked for it.</p>
+    <h2 class="sec-title reveal">Built for the<br/>Indian Salon Industry</h2>
+    <p class="sec-sub reveal">Every feature was built because real salon owners and customers asked for it. Nothing extra, nothing missing.</p>
 
     <div class="feat-grid reveal">
-      <div class="fc"><div class="fc-em">📍</div><h4>GPS Discovery</h4><p>Haversine formula-based nearby search. Radius filter from 5 to 20km.</p></div>
+      <div class="fc"><div class="fc-em">📍</div><h4>GPS Discovery</h4><p>Haversine formula-based nearby salon search. Radius filter from 5 to 20km.</p></div>
       <div class="fc"><div class="fc-em">⚡</div><h4>Instant Booking</h4><p>Slot confirmed in under 2 minutes. No phone calls, no back-and-forth.</p></div>
-      <div class="fc"><div class="fc-em">💳</div><h4>UPI / QR Payment</h4><p>Customers pay securely online. Salon owners get real-time confirmation.</p></div>
+      <div class="fc"><div class="fc-em">💳</div><h4>UPI / QR Payment</h4><p>Customers pay securely online. Salon owners get real-time payment confirmation.</p></div>
       <div class="fc"><div class="fc-em">🔔</div><h4>Live Notifications</h4><p>Booking confirmed, slot approaching, or cancelled — all real-time alerts.</p></div>
-      <div class="fc"><div class="fc-em">📊</div><h4>Earnings Dashboard</h4><p>Daily and monthly revenue with ₹5 commission breakdown for owners.</p></div>
-      <div class="fc"><div class="fc-em">🗂️</div><h4>Queue Management</h4><p>Manage walk-ins and booked slots together from one live dashboard.</p></div>
-      <div class="fc"><div class="fc-em">🔒</div><h4>2-Hour Cancel Rule</h4><p>Customers can cancel up to 2 hours before. Fair for both sides, auto-enforced.</p></div>
-      <div class="fc"><div class="fc-em">⭐</div><h4>Ratings & Reviews</h4><p>Verified customer reviews help the best salons rise naturally.</p></div>
-      <div class="fc"><div class="fc-em">🆓</div><h4>100% Free</h4><p>Both apps — completely free to download and use. No subscriptions.</p></div>
+      <div class="fc"><div class="fc-em">📊</div><h4>Earnings Dashboard</h4><p>Daily and monthly revenue with commission breakdown for salon owners.</p></div>
+      <div class="fc"><div class="fc-em">🗂️</div><h4>Queue Management</h4><p>Manage walk-ins and booked slots together from one live dashboard view.</p></div>
+      <div class="fc"><div class="fc-em">🔒</div><h4>2-Hour Cancel Rule</h4><p>Customers can cancel up to 2 hours before. Fair for both sides, enforced automatically.</p></div>
+      <div class="fc"><div class="fc-em">⭐</div><h4>Ratings & Reviews</h4><p>Verified customer reviews help the best salons rise to the top naturally.</p></div>
+      <div class="fc"><div class="fc-em">🆓</div><h4>100% Free</h4><p>Both apps — completely free to download and use. No subscriptions, no hidden charges.</p></div>
     </div>
   </div>
 </div>
 
-<!-- ══ APP FEATURES LIST ══ -->
+<!-- ══════════ APPS OVERVIEW ══════════ -->
 <div class="apps-bg">
   <div class="sec">
     <div class="eyebrow reveal">What's Inside</div>
-    <h2 class="sec-h reveal">Two Powerful Apps,<br/>One Platform</h2>
-    <div class="apps-grid">
+    <h2 class="sec-title reveal">Three Powerful Apps,<br/>One Platform</h2>
+
+    <div class="apps-grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:36px;">
       <div class="app-col reveal">
         <div class="app-col-head">
-          <div class="app-col-ico g">👤</div>
+          <div class="app-col-icon cust">👤</div>
           <h3>Customer App</h3>
         </div>
-        <ul class="afl">
+        <ul class="app-feature-list">
           <li><span>✓</span> GPS location detect & auto-search</li>
-          <li><span>✓</span> Nearby salons with exact distance</li>
+          <li><span>✓</span> Nearby salons with Haversine distance</li>
           <li><span>✓</span> Radius filter: 5 / 10 / 15 / 20km</li>
           <li><span>✓</span> Sort by nearest first</li>
           <li><span>✓</span> Search by city, area, or pincode</li>
@@ -945,46 +757,70 @@
           <li><span>✓</span> Forgot password recovery</li>
         </ul>
       </div>
+
       <div class="app-col reveal">
         <div class="app-col-head">
-          <div class="app-col-ico gr">💈</div>
+          <div class="app-col-icon sal">💈</div>
           <h3>Salon Owner App</h3>
         </div>
-        <ul class="afl">
+        <ul class="app-feature-list">
           <li><span>✓</span> Login & forgot password</li>
-          <li><span>✓</span> Add / edit / delete services & pricing</li>
+          <li><span>✓</span> Add / edit / delete services with pricing</li>
           <li><span>✓</span> Accept or reject incoming bookings</li>
-          <li><span>✓</span> 2-hour cancellation rule auto-enforced</li>
+          <li><span>✓</span> 2-hour cancellation rule enforced</li>
           <li><span>✓</span> Online / Offline toggle</li>
           <li><span>✓</span> Set salon location via GPS</li>
           <li><span>✓</span> Slot management + block specific slots</li>
-          <li><span>✓</span> Daily earnings with ₹5 commission</li>
+          <li><span>✓</span> Daily earnings with ₹5 commission deduction</li>
           <li><span>✓</span> Monthly earnings report</li>
           <li><span>✓</span> UTR payment verification</li>
           <li><span>✓</span> Customer booking history</li>
           <li><span>✓</span> Salon approval by admin required</li>
         </ul>
       </div>
+
+      <div class="app-col reveal">
+        <div class="app-col-head">
+          <div class="app-col-icon" style="background:linear-gradient(135deg,#fdf0c0,#fffbee);border:1px solid rgba(180,134,11,.2);">🤝</div>
+          <h3>Agent App</h3>
+        </div>
+        <ul class="app-feature-list">
+          <li><span>✓</span> Agent login & secure access</li>
+          <li><span>✓</span> Register new salons to platform</li>
+          <li><span>✓</span> Track all salons you've onboarded</li>
+          <li><span>✓</span> Commission tracking per salon added</li>
+          <li><span>✓</span> Real-time salon approval status</li>
+          <li><span>✓</span> Help salons get live faster</li>
+          <li><span>✓</span> Build network, earn more</li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- ══ ABOUT ══ -->
+<!-- ══════════ ABOUT ══════════ -->
 <div class="about-bg" id="about">
   <div class="sec">
     <div class="about-grid">
       <div class="about-visual reveal">✂️</div>
       <div class="about-text">
         <div class="eyebrow reveal">Our Mission</div>
-        <h2 class="sec-h reveal">Building India's<br/>Salon Ecosystem</h2>
+        <h2 class="sec-title reveal">Building India's<br/>Salon Ecosystem</h2>
         <p class="reveal">QuickCut was built with one simple belief — your time matters. We saw customers wasting hours waiting at salons, and salon owners drowning in manual work with no proper tools.</p>
         <p class="reveal">So we built a complete ecosystem — two apps working together. Customers get a fast, GPS-powered way to find and book the perfect salon. Owners get a professional system to accept bookings, manage their queue, and track their business.</p>
         <p class="reveal">We are growing city by city, salon by salon — one great haircut at a time.</p>
-        <div class="contact-box reveal">
-          <div class="contact-ico">✉️</div>
-          <div class="contact-txt">
-            <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3043515c5f5e55535f43494344555d70575d51595c1e535f5d">[email&#160;protected]</a></strong>
+        <div class="contact-card reveal">
+          <div class="contact-icon">✉️</div>
+          <div class="contact-info">
+            <strong>salonecosystem@gmail.com</strong>
             For support, partnerships, or feedback
+          </div>
+        </div>
+        <div class="contact-card reveal" style="margin-top:12px;">
+          <div class="contact-icon">📍</div>
+          <div class="contact-info">
+            <strong>No. 1-E, ECO, 2nd Floor, Koramangala</strong>
+            Bangalore, Karnataka, India
           </div>
         </div>
       </div>
@@ -992,108 +828,112 @@
   </div>
 </div>
 
-<!-- ══ CTA ══ -->
+<!-- ══════════ CTA ══════════ -->
 <div class="cta-bg">
   <div class="eyebrow reveal">Ready to Start?</div>
-  <h2 class="cta-h reveal">Download QuickCut.<br/>It's <em>Completely Free.</em></h2>
+  <h2 class="cta-h2 reveal">Download QuickCut.<br/>It's Completely Free.</h2>
   <div class="cta-btns reveal">
-    <a href="https://clever-meringue-9765a3.netlify.app/" class="btn-wh">
+    <a href="https://boisterous-choux-9c95e1.netlify.app/" target="_blank" class="btn-cta-blk">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M5 20h14v-2H5v2zm7-18L5.33 9h3.84v6h5.66V9h3.84L12 2z"/></svg>
       Customer App
     </a>
-    <a href="https://peaceful-tulumba-d71f1c.netlify.app" class="btn-gold-outline">
+    <a href="https://dashing-cajeta-7c06c8.netlify.app/" target="_blank" class="btn-cta-grn">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M5 20h14v-2H5v2zm7-18L5.33 9h3.84v6h5.66V9h3.84L12 2z"/></svg>
       Salon Owner App
+    </a>
+    <a href="https://beamish-dragon-e54e9f.netlify.app/" target="_blank" class="btn-cta-blk" style="background:linear-gradient(135deg,#d4a017,#b8860b);">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M5 20h14v-2H5v2zm7-18L5.33 9h3.84v6h5.66V9h3.84L12 2z"/></svg>
+      Agent App
     </a>
   </div>
 </div>
 
-<!-- ══ FOOTER ══ -->
+<!-- ══════════ FOOTER ══════════ -->
 <footer>
-  <div class="fi">
-    <div class="ft">
+  <div class="foot-inner">
+    <div class="foot-top">
       <div>
-        <a href="#" class="fl"><div class="fl-mark">✂</div>Quick<em>Cut</em></a>
-        <p class="ft-tag">India's smart salon booking platform — for customers and salon owners.</p>
+        <a href="#" class="foot-logo"><div class="logo-mark" style="width:30px;height:30px;border-radius:8px;background:rgba(255,255,255,.08);font-size:.9rem">✂</div>Quick<em>Cut</em></a>
+        <p class="foot-tag">India's smart salon booking platform — for customers and salon owners.</p>
       </div>
-      <div class="fcol">
+      <div class="foot-col">
         <h5>Platform</h5>
         <ul>
           <li><a href="#download">Customer App</a></li>
-          <li><a href="#download">Salon Owner App</a></li>
+          <li><a href="#download">Salon App</a></li>
+          <li><a href="#download">Agent App</a></li>
           <li><a href="#features">Features</a></li>
           <li><a href="#how">How It Works</a></li>
         </ul>
       </div>
-      <div class="fcol">
+      <div class="foot-col">
         <h5>Company</h5>
         <ul>
           <li><a href="#about">About QuickCut</a></li>
-          <li><a href="/cdn-cgi/l/email-protection#443725282b2a21272b373d37302129042329252d286a272b29">Contact Us</a></li>
+          <li><a href="mailto:salonecosystem@gmail.com">Contact Us</a></li>
           <li><a href="#">Privacy Policy</a></li>
           <li><a href="#">Terms of Service</a></li>
         </ul>
       </div>
-      <div class="fcol">
+      <div class="foot-col">
         <h5>Support</h5>
         <ul>
-          <li><a href="/cdn-cgi/l/email-protection#3e4d5f5251505b5d514d474d4a5b537e59535f5752105d5153"><span class="__cf_email__" data-cfemail="186b797477767d7b776b616b6c7d75587f75797174367b7775">[email&#160;protected]</span></a></li>
+          <li><a href="mailto:salonecosystem@gmail.com">salonecosystem@gmail.com</a></li>
           <li><a href="#">Help Center</a></li>
           <li><a href="#">FAQs</a></li>
         </ul>
       </div>
     </div>
-    <div class="fb">
-      <span class="fb-copy">© 2025 QuickCut. All rights reserved.</span>
-      <a href="/cdn-cgi/l/email-protection#9ae9fbf6f5f4fff9f5e9e3e9eefff7dafdf7fbf3f6b4f9f5f7" class="fb-email"><span class="__cf_email__" data-cfemail="91e2f0fdfefff4f2fee2e8e2e5f4fcd1f6fcf0f8fdbff2fefc">[email&#160;protected]</span></a>
+    <div class="foot-bottom">
+      <span class="foot-copy">© 2025 QuickCut. All rights reserved.</span>
+      <a href="mailto:salonecosystem@gmail.com" class="foot-email">salonecosystem@gmail.com</a>
     </div>
   </div>
 </footer>
 
-<!-- ══ STICKY BAR ══ -->
+<!-- ══════════ STICKY BAR ══════════ -->
 <div class="sticky" id="stickyBar">
-  <div class="s-txt"><strong>QuickCut</strong> — 2 Free Apps</div>
-  <div class="s-btns">
-    <a href="https://clever-meringue-9765a3.netlify.app/" class="s-btn c">👤 Customer</a>
-    <a href="https://peaceful-tulumba-d71f1c.netlify.app" class="s-btn s">💈 Salon</a>
+  <div class="sticky-txt"><strong>QuickCut</strong> — 3 Free Apps</div>
+  <div class="sticky-btns">
+    <a href="https://boisterous-choux-9c95e1.netlify.app/" target="_blank" class="sticky-btn cust">👤 Customer</a>
+    <a href="https://dashing-cajeta-7c06c8.netlify.app/" target="_blank" class="sticky-btn sal">💈 Salon</a>
+    <a href="https://beamish-dragon-e54e9f.netlify.app/" target="_blank" class="sticky-btn" style="background:linear-gradient(135deg,#d4a017,#b8860b);color:white;">🤝 Agent</a>
   </div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  // sticky bar
+<script>
+  // Sticky bar
   const heroEl = document.querySelector('.hero');
   const barEl  = document.getElementById('stickyBar');
   new IntersectionObserver(([e]) => {
     barEl.style.display = e.isIntersecting ? 'none' : 'flex';
   }, { threshold:0.1 }).observe(heroEl);
 
-  // tabs
-  function switchTab(w) {
-    document.querySelectorAll('.tab').forEach((b,i) => b.classList.toggle('on', (w==='cu'&&i===0)||(w==='sa'&&i===1)));
-    document.getElementById('tc-cu').className = 'tc'+(w==='cu'?' on':'');
-    document.getElementById('tc-sa').className = 'tc'+(w==='sa'?' on':'');
-  }
-
-  // mobile menu
-  function toggleMenu() {
-    const nl = document.querySelector('.nl');
-    nl.style.cssText = nl.style.display==='flex'
-      ? 'display:none' : 'display:flex;flex-direction:column;position:fixed;top:58px;left:0;right:0;background:rgba(255,255,255,.98);backdrop-filter:blur(20px);padding:20px 20px 28px;border-bottom:1px solid #e8e2d0;box-shadow:0 8px 32px rgba(0,0,0,.1);gap:4px;z-index:899;';
-  }
-
-  // close menu on link click
-  document.querySelectorAll('.nl a').forEach(a => {
-    a.addEventListener('click', () => {
-      const nl = document.querySelector('.nl');
-      nl.style.cssText = 'display:none';
+  // Tabs
+  function switchTab(which) {
+    document.querySelectorAll('.tab').forEach((b,i) => {
+      b.classList.toggle('on', (which==='cust'&&i===0)||(which==='sal'&&i===1));
     });
-  });
+    document.getElementById('tc-cust').className = 'tc' + (which==='cust'?' on':'');
+    document.getElementById('tc-sal').className  = 'tc' + (which==='sal'?' on':'');
+  }
 
-  // reveal on scroll
-  const obs = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold:0.12 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  // Mobile menu
+  function toggleMobileMenu() {
+    const nl = document.querySelector('.nav-links');
+    if (nl.style.display === 'flex') {
+      nl.style.display = 'none';
+    } else {
+      nl.style.cssText = 'display:flex;flex-direction:column;position:absolute;top:66px;left:0;right:0;background:rgba(245,242,235,0.97);backdrop-filter:blur(20px);padding:20px 32px;gap:16px;border-bottom:1px solid #ddd9cf;';
+    }
+  }
+
+  // Scroll reveal
+  const revEls = document.querySelectorAll('.reveal');
+  const ro = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); ro.unobserve(e.target); } });
+  }, { threshold:0.1 });
+  revEls.forEach(el => ro.observe(el));
 </script>
 </body>
 </html>
